@@ -1,0 +1,29 @@
+{
+  "name": "sistema-permisos-hazel",
+  "version": "1.0.0",
+  "description": "Sistema de permisos para uso de computadoras académicas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HazelCaballero/Sistema-de-Permisos-para-Uso-de-Computadoras-Acad-micas-By-Hazel.git"
+  },
+  "keywords": [
+    "sistema",
+    "permisos",
+    "computadoras"
+  ],
+  "author": "Caballero Hazel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HazelCaballero/Sistema-de-Permisos-para-Uso-de-Computadoras-Acad-micas-By-Hazel/issues"
+  },
+  "homepage": "https://github.com/HazelCaballero/Sistema-de-Permisos-para-Uso-de-Computadoras-Acad-micas-By-Hazel#readme",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.2",
+    "mongoose": "^8.10.1"
+  }
+}
