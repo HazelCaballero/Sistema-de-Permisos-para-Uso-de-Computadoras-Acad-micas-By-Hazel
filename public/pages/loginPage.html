@@ -1,40 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de agregar tu archivo CSS -->
 </head>
 <body>
-    <!-- Encabezado de la página con el título principal -->
     <header>
         <h1>Iniciar sesión</h1>
     </header>
     <main>
-        <!-- Sección de inicio de sesión para administrador -->
         <div class="loginAccount">
             <h2>Iniciar sesión como administrador</h2>
-            <!-- Campo de entrada para el ID de usuario del administrador -->
-            <input type="text" id="loginAdminId" placeholder="ID de Usuario">           
-            <!-- Campo de entrada para la contraseña del administrador -->
-            <input type="password" id="loginAdminPassword" placeholder="Contraseña">            
-            <!-- Botón para iniciar sesión como administrador -->
-            <button class="btnLogin" id="btnLoginAdmin">Iniciar</button>            
-            <!-- Enlace para ir a la página principal del administrador después de iniciar sesión -->
+            <input type="text" id="loginAdminId" placeholder="ID de Usuario" required>
+            <input type="password" id="loginAdminPassword" placeholder="Contraseña" required>
+            <button class="btnLogin" id="btnLoginAdmin">Iniciar</button>
             <a href="mainPageAdmin.html" id="linkMainPageAdmin">Ir a Main Page</a>
         </div>
-        <!-- Sección de inicio de sesión para solicitante -->
         <div class="loginAccount" id="loginUser">
-            <h2>Iniciar sesión como Solicitante</h2>           
-            <!-- Campo de entrada para el ID de usuario del solicitante -->
-            <input type="text" id="loginUserId" placeholder="ID de Usuario">           
-            <!-- Campo de entrada para la contraseña del solicitante -->
-            <input type="password" id="loginUserPassword" placeholder="Contraseña">           
-            <!-- Botón para iniciar sesión como solicitante -->
-            <button class="btnLogin" id="btnLoginUser">Iniciar</button>          
-            <!-- Enlace para ir a la página principal del solicitante después de iniciar sesión -->
+            <h2>Iniciar sesión como Solicitante</h2>
+            <input type="text" id="loginUserId" placeholder="ID de Usuario" required>
+            <input type="password" id="loginUserPassword" placeholder="Contraseña" required>
+            <button class="btnLogin" id="btnLoginUser">Iniciar</button>
             <a href="mainPageUsers.html" id="linkMainPageUsers">Ir a Main Page</a>
         </div>
     </main>
+    <script type="module" src="loginPage.js"></script>
 </body>
 </html>

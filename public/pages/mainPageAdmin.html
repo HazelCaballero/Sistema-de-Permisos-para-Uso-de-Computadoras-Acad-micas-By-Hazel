@@ -1,72 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Page Administrator</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de agregar tu archivo CSS -->
 </head>
 <body>
     <header>
-        <h2>Administrador</h2> <!-- Título del administrador -->
-        <h1>Solicitudes</h1> <!-- Título de las solicitudes -->
+        <h2>Administrador</h2>
+        <h3 id="claveVerificarAdmin">Clave para validar autorización de admin</h3>
+        <h1>Solicitudes</h1>
     </header>
-    <aside>
-        <div id="pendingRequestsSection">
-            <h3>Solicitudes pendientes</h3> <!-- Encabezado de solicitudes pendientes -->
-            <div id="pendingRequests">
-                <ul id="pendingRequestsList">
-                    <!-- Las solicitudes pendientes se mostrarán aquí -->
-                </ul>
-            </div>
-        </div>
-        <div id="viewRequestSection">
-            <h3>Visualizar solicitud</h3> <!-- Encabezado de visualización de solicitud -->
+    <main>
+        <section id="pendingRequestsSection">
+            <h3>Solicitudes pendientes</h3>
+            <ul id="pendingRequestsList">
+                <!-- Aquí se cargarán las solicitudes pendientes con JS -->
+            </ul>
+        </section>
+
+        <section id="viewRequestSection">
+            <h3>Visualizar solicitud</h3>
             <div id="containerApproveReject">
                 <div id="departureDate">Fecha Salida</div>
                 <div id="returnDate">Fecha Entrada</div>
                 <div id="computerCode">Código Computadora</div>
                 <div id="useR">Usuario</div>
-                <div id="approvalButtons"> 
-                    <button id="approveButton">Aprobar</button>
-                    <button id="denyButton">Denegar</button>
-                </div>
-                <div id="commentSection">
-                    <input type="text" id="commentRequest" placeholder="Comentar">
-                </div>
+                <input type="text" id="commentRequest" placeholder="Comentar">
+                <input type="text" id="userAuthKeyApproval" placeholder="Clave de autorización">
+                <button id="approveButton">Aprobar</button>
+                <button id="denyButton">Denegar</button>
             </div>
-        </div>
-    </aside>
-    <main>
-        <div class="searchAndHistory">
+        </section>
+
+        <section id="searchAndHistory">
             <div id="searchSection">
-                <h3>Buscador</h3> <!-- Encabezado del buscador -->
+                <h3>Buscador</h3>
                 <input type="text" id="keywordSearch" placeholder="Palabra clave">
-                <label for="requesterCheckbox">Persona que solicita</label>
-                <input type="checkbox" id="requesterCheckbox">
-                <label for="departureCheckbox">Fecha de salida</label>
-                <input type="checkbox" id="departureCheckbox">
-                <label for="returnCheckbox">Fecha de regreso</label>
-                <input type="checkbox" id="returnCheckbox">
-                <label for="computerCodeCheckbox">Código de la computadora</label>
-                <input type="checkbox" id="computerCodeCheckbox">
-                <label for="statusCheckbox">Estado de la solicitud</label>
-                <input type="checkbox" id="statusCheckbox">
+                <input type="checkbox" id="requesterCheckbox"> Persona que solicita
+                <input type="checkbox" id="departureCheckbox"> Fecha de salida
+                <input type="checkbox" id="returnCheckbox"> Fecha de regreso
+                <input type="checkbox" id="computerCodeCheckbox"> Código de computadora
+                <input type="checkbox" id="statusCheckbox"> Estado de la solicitud
             </div>
+
             <div id="historySection">
-                <h3>Historial de solicitudes</h3> <!-- Encabezado del historial de solicitudes -->
+                <h3>Historial de solicitudes</h3>
                 <div id="currentAdminRequests">
                     <h3>Solicitudes revisadas por administrador actual</h3>
-                    <ul id="currentAdminList">
-                        <!-- Las solicitudes revisadas por el administrador actual se mostrarán aquí -->
-                    </ul>
+                    <ul id="currentAdminList"></ul>
                 </div>
                 <div id="otherAdminsRequests">
                     <h3>Solicitudes revisadas por otros administradores</h3>
-                    <ul id="otherAdminList">
-                        <!-- Las solicitudes revisadas por otros administradores se mostrarán aquí -->
-                    </ul>
+                    <ul id="otherAdminList"></ul>
                 </div>
             </div>
-        </main>
-    </body>
-    </html>
+        </section>
+    </main>
+    <script type="module" src="mainPageAdmin.js"></script>
+</body>
+</html>
