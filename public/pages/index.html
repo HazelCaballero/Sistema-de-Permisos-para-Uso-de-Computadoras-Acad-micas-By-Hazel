@@ -6,27 +6,41 @@
     <title>Index Page</title>
 </head>
 <body>
+    <!-- Encabezado de la página con el título principal -->
     <header>
         <h1>Sistema de Permisos para Uso de Computadoras</h1>
     </header>
     <main>
+        <!-- Sección de creación de cuenta para administrador y usuario -->
         <div class="createAccount">
             <h2>Crear Cuenta</h2>
+            <!-- Formulario para crear cuenta de administrador -->
             <div class="createAdmin" id="createAdmin">
+                <!-- Campo de entrada para el ID del administrador -->
                 <input type="text" id="adminUserId" placeholder="ID de Usuario">
+                <!-- Campo de entrada para la contraseña del administrador -->
                 <input type="password" id="adminPassword" placeholder="Contraseña">
+                <!-- Campo oculto para la clave de autorización del administrador -->
                 <input type="hidden" id="adminAuthKey" placeholder="Clave de autorización">
+                <!-- Botón para crear la cuenta de administrador -->
                 <button class="btnCreated" id="btnCreateAdmin">Crear</button>
             </div>
+            <!-- Formulario para crear cuenta de usuario -->
             <div class="createUsers" id="createUsers">
+                <!-- Campo de entrada para el ID del usuario -->
                 <input type="text" id="userId" placeholder="ID de Usuario">
+                <!-- Campo de entrada para la contraseña del usuario -->
                 <input type="password" id="userPassword" placeholder="Contraseña">
+                <!-- Campo oculto para la clave de autorización del usuario -->
                 <input type="text" id="userAuthKey" placeholder="Clave de autorización">
+                <!-- Botón para crear la cuenta de usuario -->
                 <button class="btnCreated" id="btnCreateUser">Crear</button>
             </div>    
         </div>
+
+        <!-- Enlace que redirige al login -->
         <div class="goLogin">
-                <a href="pages/loginPage.html">Ir a login para Administrador</a>
+            <a href="pages/loginPage.html">Ir a login para Administrador</a>
         </div>
     </main>
 </body>

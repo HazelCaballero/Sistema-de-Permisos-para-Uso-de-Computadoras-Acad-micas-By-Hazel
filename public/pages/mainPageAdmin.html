@@ -6,6 +6,67 @@
     <title>Main Page Administrator</title>
 </head>
 <body>
-    
-</body>
-</html>
+    <header>
+        <h2>Administrador</h2> <!-- Título del administrador -->
+        <h1>Solicitudes</h1> <!-- Título de las solicitudes -->
+    </header>
+    <aside>
+        <div id="pendingRequestsSection">
+            <h3>Solicitudes pendientes</h3> <!-- Encabezado de solicitudes pendientes -->
+            <div id="pendingRequests">
+                <ul id="pendingRequestsList">
+                    <!-- Las solicitudes pendientes se mostrarán aquí -->
+                </ul>
+            </div>
+        </div>
+        <div id="viewRequestSection">
+            <h3>Visualizar solicitud</h3> <!-- Encabezado de visualización de solicitud -->
+            <div id="containerApproveReject">
+                <div id="departureDate">Fecha Salida</div>
+                <div id="returnDate">Fecha Entrada</div>
+                <div id="computerCode">Código Computadora</div>
+                <div id="useR">Usuario</div>
+                <div id="approvalButtons"> 
+                    <button id="approveButton">Aprobar</button>
+                    <button id="denyButton">Denegar</button>
+                </div>
+                <div id="commentSection">
+                    <input type="text" id="commentRequest" placeholder="Comentar">
+                </div>
+            </div>
+        </div>
+    </aside>
+    <main>
+        <div class="searchAndHistory">
+            <div id="searchSection">
+                <h3>Buscador</h3> <!-- Encabezado del buscador -->
+                <input type="text" id="keywordSearch" placeholder="Palabra clave">
+                <label for="requesterCheckbox">Persona que solicita</label>
+                <input type="checkbox" id="requesterCheckbox">
+                <label for="departureCheckbox">Fecha de salida</label>
+                <input type="checkbox" id="departureCheckbox">
+                <label for="returnCheckbox">Fecha de regreso</label>
+                <input type="checkbox" id="returnCheckbox">
+                <label for="computerCodeCheckbox">Código de la computadora</label>
+                <input type="checkbox" id="computerCodeCheckbox">
+                <label for="statusCheckbox">Estado de la solicitud</label>
+                <input type="checkbox" id="statusCheckbox">
+            </div>
+            <div id="historySection">
+                <h3>Historial de solicitudes</h3> <!-- Encabezado del historial de solicitudes -->
+                <div id="currentAdminRequests">
+                    <h3>Solicitudes revisadas por administrador actual</h3>
+                    <ul id="currentAdminList">
+                        <!-- Las solicitudes revisadas por el administrador actual se mostrarán aquí -->
+                    </ul>
+                </div>
+                <div id="otherAdminsRequests">
+                    <h3>Solicitudes revisadas por otros administradores</h3>
+                    <ul id="otherAdminList">
+                        <!-- Las solicitudes revisadas por otros administradores se mostrarán aquí -->
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </body>
+    </html>
