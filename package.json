@@ -4,7 +4,8 @@
   "description": "Sistema de permisos para uso de computadoras académicas",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,9 @@
   "homepage": "https://github.com/HazelCaballero/Sistema-de-Permisos-para-Uso-de-Computadoras-Acad-micas-By-Hazel#readme",
   "dependencies": {
     "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
     "express": "^4.21.2",
+    "json-server": "^1.0.0-beta.3",
     "mongoose": "^8.10.1"
   }
 }

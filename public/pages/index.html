@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+</head>
+<body>
+    <header>
+        <h1>Sistema de Permisos para Uso de Computadoras</h1>
+    </header>
+    <main>
+        <div class="createAccount">
+            <h2>Crear Cuenta</h2>
+            <div class="createAdmin" id="createAdmin">
+                <input type="text" id="adminUserId" placeholder="ID de Usuario">
+                <input type="password" id="adminPassword" placeholder="Contraseña">
+                <input type="hidden" id="adminAuthKey" placeholder="Clave de autorización">
+                <button class="btnCreated" id="btnCreateAdmin">Crear</button>
+            </div>
+            <div class="createUsers" id="createUsers">
+                <input type="text" id="userId" placeholder="ID de Usuario">
+                <input type="password" id="userPassword" placeholder="Contraseña">
+                <input type="text" id="userAuthKey" placeholder="Clave de autorización">
+                <button class="btnCreated" id="btnCreateUser">Crear</button>
+            </div>    
+        </div>
+        <div class="goLogin">
+                <a href="pages/loginPage.html">Ir a login para Administrador</a>
+        </div>
+    </main>
+</body>
+</html>
