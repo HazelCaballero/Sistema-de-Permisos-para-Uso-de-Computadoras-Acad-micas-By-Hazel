@@ -1,24 +1,224 @@
+.space-mono-regular {
+    font-family: "Space Mono", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .space-mono-bold {
+    font-family: "Space Mono", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .space-mono-regular-italic {
+    font-family: "Space Mono", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .space-mono-bold-italic {
+    font-family: "Space Mono", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
 * {
     margin: 0px;
 }
-body {
-    background-color: aqua;
+
+body{
+    background-image: url('../img/technology.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
 }
 
 .globalContainer {
-    background-color: rgb(158, 190, 245);
+    padding: 10px; 
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 75px 515px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 90px 480px;
     grid-template-areas: 
         "header header"
         "main main";
+        justify-items: center;
 }
 
 header {
     grid-area: header;
+    background-color: #fcaf5c;
+    margin-bottom: 20px;
+    font-family: "Space Mono", serif;
+    font-weight: 700;
+    font-style: normal;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 1200px;
+    text-align: center;
+    color: #18364d;
+}
+
+h1{
+    position: relative;
+    top: 4px;
 }
 
 main {
     grid-area: main;
+}
+
+.mainContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 330px 40px;
+    grid-template-areas: 
+        "createAccount createAccount"
+        "createAdmin createUsers"
+        "goLogin goLogin";
+        width: 1000px;
+        justify-items: center;
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
+}
+
+.createAccount{
+    grid-area: createAccount;
+    display: flex; 
+    justify-content: center; 
+    justify-self: center;
+    align-items: center;
+    background-color: #fcaf5c;
+    margin-bottom: 20px;
+    font-family: "Space Mono", serif;
+    font-weight: 700;
+    font-style: italic;
+    font-family: "Space Mono", serif;
+    font-weight: 400;
+    font-style: italic;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15px;
+    width: 250px;
+    color: #18364d;
+}
+
+.createAdmin{
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(6px);
+    color: white;
+    grid-area: createAdmin;
+    padding: 30px;
+    justify-items: center;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    width: 400px;
+    margin-top: 10px;
+    font-family: "Space Mono", serif;
+    font-weight: 400;
+    font-style: italic;
+    border-radius: 5px;
+    border-color: #fcaf5c;
+    border-style: solid;
+    padding-left: 5px;
+    padding-right: 5px; 
+}
+
+.createUsers{
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(6px);
+    color: white;
+    grid-area: createUsers;
+    padding: 30px;
+    justify-items: center;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    width: 400px;
+    margin-top: 10px;
+    font-family: "Space Mono", serif;
+    font-weight: 400;
+    font-style: italic; 
+    border-radius: 5px;
+    border-color: #fcaf5c;
+    border-style: solid;
+    padding-left: 5px;
+    padding-right: 5px;  
+}
+
+.goLogin {
+    grid-area: goLogin;
+    display: flex; 
+    justify-content: center; 
+    justify-self: center;
+    align-items: center; 
+    padding: 20px;
+    background-color: #fcaf5c;
+    margin-top: 5px;
+    font-family: "Space Mono", serif;
+    font-weight: 700;
+    font-style: normal;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-color: #18364d;
+    border-style: solid;
+}
+
+input{
+border-radius: 5px;
+text-align: center;
+padding: 5px;
+font-family: "Space Mono", serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    color: #18364d;
+    border-color: #fcaf5c;
+    border-style: solid;
+    background-color: wheat;
+}
+
+::placeholder{
+    font-family: "Space Mono", serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    color: #18364d;
+}
+
+button{
+    font-family: "Space Mono", serif;
+    font-weight: 700;
+    font-style: normal;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+    font-size: medium;
+    border-color: #fcaf5c;
+    border-style: solid;
+}
+
+label{
+    font-size: 18px;
+    padding: 15px;
+    margin-top: 10px;
+    font-weight: bold;
+    background-color: rgba(252, 175, 92, 0.8);
+    border-radius: 10px;
+}
+.contContra{
+    position: relative;
+    top: 30px;
+}
+
+a{
+    text-decoration: none;
+    color: #18364d;
 }

@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de agregar tu archivo CSS -->
+    <link rel="stylesheet" href="../styles/loginPage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Lexend:wght@100..900&family=Matemasie&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -16,14 +19,14 @@
             <input type="text" id="loginAdminId" placeholder="ID de Usuario" required>
             <input type="password" id="loginAdminPassword" placeholder="Contraseña" required>
             <button class="btnLogin" id="btnLoginAdmin">Iniciar</button>
-            <a href="mainPageAdmin.html" id="linkMainPageAdmin">Ir a Main Page</a>
+            <a href="mainPageAdmin.html" id="linkMainPageAdmin">Ir a Admin Page</a>
         </div>
         <div class="loginAccount" id="loginUser">
             <h2>Iniciar sesión como Solicitante</h2>
             <input type="text" id="loginUserId" placeholder="ID de Usuario" required>
             <input type="password" id="loginUserPassword" placeholder="Contraseña" required>
             <button class="btnLogin" id="btnLoginUser">Iniciar</button>
-            <a href="mainPageUsers.html" id="linkMainPageUsers">Ir a Main Page</a>
+            <a href="mainPageUsers.html" id="linkMainPageUsers">Ir a Admin Page</a>
         </div>
     </main>
     <script type="module" src="loginPage.js"></script>

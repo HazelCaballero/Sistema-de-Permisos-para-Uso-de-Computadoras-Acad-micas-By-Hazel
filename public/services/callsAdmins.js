@@ -9,7 +9,7 @@ function handleError(error, action) {
 }
 
 // LLAMADO GET - Obtener todos los administradores
-async function getRequests() {
+async function getAdmins() {
     try {
         const response = await fetch('http://localhost:3001/admins', {  
             method: 'GET',
@@ -30,7 +30,7 @@ async function getRequests() {
 }
 
 // LLAMADO POST - Crear un nuevo administrador
-async function postRequest(adminData) {
+async function postAdmin(adminData) {
     try {
         const response = await fetch('http://localhost:3001/admins', {
             method: 'POST',
@@ -52,7 +52,7 @@ async function postRequest(adminData) {
 }
 
 // LLAMADO DELETE - Eliminar un administrador
-async function deleteRequest(adminId) {
+async function deleteAdmin(adminId) {
     try {
         const response = await fetch(`http://localhost:3001/admins/${adminId}`, {
             method: 'DELETE',
@@ -73,14 +73,14 @@ async function deleteRequest(adminId) {
 }
 
 // LLAMADO PUT - Actualizar un administrador
-async function updateRequest(adminId, updatedRequestData) {
+async function updateAdmin(adminId, updatedAdminData) {
     try {
         const response = await fetch(`http://localhost:3001/admins/${adminId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(updatedRequestData),
+            body: JSON.stringify(updatedAdminData),
         });
 
         if (!response.ok) {
@@ -96,4 +96,4 @@ async function updateRequest(adminId, updatedRequestData) {
 }
 
 // Exportar funciones
-export { getRequests, postRequest, deleteRequest, updateRequest };
+export { getAdmins, postAdmin, deleteAdmin, updateAdmin };

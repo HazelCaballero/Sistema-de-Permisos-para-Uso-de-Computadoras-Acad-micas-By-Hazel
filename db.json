@@ -1,5 +1,22 @@
 {
-    "admins": [],
-    "users": [],
-    "requests": []
-  }  
+  "admins": [
+    {
+      "id": "30bc",
+      "adminId": "Hazel12345",
+      "adminPassword": "Hazel12345"
+    }
+  ],
+  "users": [
+    {
+      "id": "90ba",
+      "userId": "Pamela1234",
+      "userPassword": "Pamela1234"
+    },
+    {
+      "id": "3eed",
+      "userId": "harold32323",
+      "userPassword": "AAAadef43434"
+    }
+  ],
+  "requests": []
+}
