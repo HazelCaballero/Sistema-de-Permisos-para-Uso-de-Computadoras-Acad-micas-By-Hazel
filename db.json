@@ -1,22 +1,48 @@
 {
   "admins": [
     {
-      "id": "30bc",
-      "adminId": "Hazel12345",
-      "adminPassword": "Hazel12345"
+      "id": "4819",
+      "adminId": "Hazel1234",
+      "adminPassword": "Hazel1234"
+    },
+    {
+      "id": "45df",
+      "adminId": "ENrique3473",
+      "adminPassword": "ENrique3473"
     }
   ],
   "users": [
     {
-      "id": "90ba",
-      "userId": "Pamela1234",
-      "userPassword": "Pamela1234"
+      "id": "abbe",
+      "userId": "Pamela23435",
+      "userPassword": "Pamela23435"
     },
     {
-      "id": "3eed",
-      "userId": "harold32323",
-      "userPassword": "AAAadef43434"
+      "id": "9969",
+      "userId": "Pamela5678",
+      "userPassword": "Pamela5678"
     }
   ],
-  "requests": []
+  "requests": [
+    {
+      "id": "8684",
+      "userId": "Pamela5678",
+      "departureDate": "2025-03-20",
+      "returnDate": "2025-04-04",
+      "computerCode": "rfed4r554",
+      "termsCheckbox": true,
+      "headquarters": "Alajuela",
+      "status": "Aprobada"
+    },
+    {
+      "id": "c9b0",
+      "userId": "Pamela5678",
+      "departureDate": "2025-03-05",
+      "returnDate": "2025-03-18",
+      "computerCode": "uysiedr45",
+      "termsCheckbox": true,
+      "headquarters": "Guanacaste",
+      "status": "Denegada"
+    }
+  ]
 }

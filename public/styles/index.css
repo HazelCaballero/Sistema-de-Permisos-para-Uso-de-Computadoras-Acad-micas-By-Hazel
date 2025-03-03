@@ -1,141 +1,153 @@
+/* Estilos para las fuentes personalizadas con "Space Mono" */
 .space-mono-regular {
-    font-family: "Space Mono", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .space-mono-bold {
-    font-family: "Space Mono", serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  .space-mono-regular-italic {
-    font-family: "Space Mono", serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-  .space-mono-bold-italic {
-    font-family: "Space Mono", serif;
-    font-weight: 700;
-    font-style: italic;
-  }
-  
+    font-family: "Space Mono", serif; /* Usando la fuente Space Mono con peso regular (400) */
+    font-weight: 400; /* Peso normal para la fuente */
+    font-style: normal; /* Sin estilo en cursiva */
+}
+
+.space-mono-bold {
+    font-family: "Space Mono", serif; /* Usando la fuente Space Mono con peso negrita (700) */
+    font-weight: 700; /* Peso negrita para la fuente */
+    font-style: normal; /* Sin estilo en cursiva */
+}
+
+.space-mono-regular-italic {
+    font-family: "Space Mono", serif; /* Usando la fuente Space Mono con peso regular (400) */
+    font-weight: 400; /* Peso normal */
+    font-style: italic; /* Estilo en cursiva */
+}
+
+.space-mono-bold-italic {
+    font-family: "Space Mono", serif; /* Usando la fuente Space Mono con peso negrita (700) */
+    font-weight: 700; /* Peso negrita */
+    font-style: italic; /* Estilo en cursiva */
+}
+
+/* Estilos globales, reseteo márgenes para todo el sitio */
 * {
-    margin: 0px;
+    margin: 0px; /* Elimino márgenes de todos los elementos para tener un diseño consistente */
 }
 
-body{
-    background-image: url('../img/technology.jpg');
-    background-size: cover; 
-    background-repeat: no-repeat;
+/* Estilos para el fondo del body */
+body {
+    background-image: url('../img/technology.jpg'); /* Aplico una imagen de fondo */
+    background-size: cover; /* Aseguro que la imagen cubra toda el área */
+    background-repeat: no-repeat; /* Evito que la imagen se repita */
 }
 
+/* Contenedor principal para organizar el layout con grid */
 .globalContainer {
-    padding: 10px; 
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 90px 480px;
-    grid-template-areas: 
-        "header header"
-        "main main";
-        justify-items: center;
+    padding: 10px; /* Agrego un poco de espacio interno al contenedor */
+    display: grid; /* Uso grid para organizar los elementos en una cuadrícula */
+    grid-template-columns: 1fr; /* Solo una columna en el diseño */
+    grid-template-rows: 90px 480px; /* Defino las alturas de las filas */
+    grid-template-areas:
+        "header header" /* El encabezado ocupará toda la fila */
+        "main main"; /* El área principal ocupará el resto */
+    justify-items: center; /* Alineo los elementos dentro de las celdas al centro */
 }
 
+/* Estilos para el encabezado */
 header {
-    grid-area: header;
-    background-color: #fcaf5c;
-    margin-bottom: 20px;
-    font-family: "Space Mono", serif;
-    font-weight: 700;
-    font-style: normal;
-    border-radius: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
-    width: 1200px;
-    text-align: center;
-    color: #18364d;
+    grid-area: header; /* Coloco el header en el área correspondiente */
+    background-color: #fcaf5c; /* Fondo de color naranja */
+    margin-bottom: 20px; /* Margen inferior para separar el header del contenido */
+    font-family: "Space Mono", serif; /* Uso la fuente "Space Mono" */
+    font-weight: 700; /* El texto es en negrita */
+    font-style: normal; /* Estilo normal (sin cursiva) */
+    border-radius: 5px; /* Bordes redondeados */
+    padding-left: 5px; /* Relleno interno a la izquierda */
+    padding-right: 5px; /* Relleno interno a la derecha */
+    width: 1200px; /* Ancho fijo para el header */
+    text-align: center; /* Centrado del texto */
+    color: #18364d; /* Color de texto en gris oscuro */
+    border-color: #18364d; /* Borde con el mismo color del texto */
+    border-style: solid; /* Borde sólido */
 }
 
-h1{
+/* Ajuste de la posición del título dentro del header */
+h1 {
     position: relative;
-    top: 4px;
+    top: 4px; /* Desplazo el título ligeramente hacia abajo */
 }
 
+/* Estilos para el área principal */
 main {
-    grid-area: main;
+    grid-area: main; /* Coloco el área principal en el área correspondiente */
 }
 
-.mainContainer{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 80px 330px 40px;
-    grid-template-areas: 
-        "createAccount createAccount"
-        "createAdmin createUsers"
-        "goLogin goLogin";
-        width: 1000px;
-        justify-items: center;
-        justify-content: center;
-        justify-items: center;
-        text-align: center;
+/* Contenedor principal de las secciones dentro de la página */
+.mainContainer {
+    display: grid; /* Uso grid para organizar los elementos en dos columnas */
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+    grid-template-rows: 80px 410px 40px; /* Tres filas con diferentes alturas */
+    grid-template-areas:
+        "createAccount createAccount" /* Una fila para la sección de crear cuenta */
+        "createAdmin createUsers" /* Fila para crear administrador y usuarios */
+        "goLogin goLogin"; /* Fila para el botón de login */
+    width: 1000px; /* Ancho fijo para el contenedor */
+    justify-items: center; /* Alineo los elementos al centro */
+    justify-content: center; /* Alineo el contenido en el centro */
+    text-align: center; /* Centrado del texto */
 }
 
-.createAccount{
-    grid-area: createAccount;
-    display: flex; 
-    justify-content: center; 
-    justify-self: center;
-    align-items: center;
-    background-color: #fcaf5c;
-    margin-bottom: 20px;
-    font-family: "Space Mono", serif;
-    font-weight: 700;
-    font-style: italic;
-    font-family: "Space Mono", serif;
-    font-weight: 400;
-    font-style: italic;
-    border-radius: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
-    font-size: 15px;
-    width: 250px;
-    color: #18364d;
+/* Estilos para el botón de crear cuenta */
+.createAccount {
+    grid-area: createAccount; /* Coloco el botón en el área correspondiente */
+    display: flex; /* Uso flexbox para alinear el contenido */
+    justify-content: center; /* Alineo el contenido al centro */
+    justify-self: center; /* Alineo este elemento al centro de su celda */
+    align-items: center; /* Alineo verticalmente */
+    background-color: #fcaf5c; /* Fondo de color naranja */
+    margin-bottom: 20px; /* Margen inferior para separar el botón de otros elementos */
+    font-family: "Space Mono", serif; /* Uso la fuente "Space Mono" */
+    font-weight: 700; /* Negrita */
+    font-style: italic; /* Estilo en cursiva */
+    border-radius: 5px; /* Bordes redondeados */
+    padding-left: 5px; /* Relleno interno a la izquierda */
+    padding-right: 5px; /* Relleno interno a la derecha */
+    font-size: 15px; /* Tamaño de fuente */
+    width: 250px; /* Ancho fijo */
+    color: #18364d; /* Color del texto */
+    position: relative;
+    z-index: 1; /* Aseguro que esté por encima de otros elementos */
+    border-color: #18364d; /* Color del borde */
+    border-style: solid; /* Borde sólido */
 }
 
-.createAdmin{
-    background-color: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(6px);
-    color: white;
-    grid-area: createAdmin;
-    padding: 30px;
-    justify-items: center;
-    justify-content: center;
-    justify-items: center;
-    text-align: center;
-    margin-right: 10px;
-    margin-bottom: 20px;
-    width: 400px;
-    margin-top: 10px;
-    font-family: "Space Mono", serif;
-    font-weight: 400;
-    font-style: italic;
-    border-radius: 5px;
-    border-color: #fcaf5c;
-    border-style: solid;
-    padding-left: 5px;
-    padding-right: 5px; 
+/* Estilos para la sección de crear administrador */
+.createAdmin {
+    background-color: rgba(0, 0, 0, 0.2); /* Fondo con transparencia */
+    backdrop-filter: blur(6px); /* Filtro de desenfoque */
+    color: white; /* Color del texto blanco */
+    grid-area: createAdmin; /* Coloco el área correspondiente */
+    padding: 30px; /* Padding para darle espacio interno */
+    justify-items: center; /* Alineo el contenido al centro */
+    text-align: center; /* Centrado del texto */
+    margin-right: 10px; /* Margen derecho */
+    margin-bottom: 20px; /* Margen inferior */
+    width: 400px; /* Ancho fijo */
+    margin-top: 10px; /* Margen superior */
+    font-family: "Space Mono", serif; /* Fuente "Space Mono" */
+    font-weight: 400; /* Peso normal */
+    font-style: italic; /* Estilo en cursiva */
+    border-radius: 5px; /* Bordes redondeados */
+    border-color: #fcaf5c; /* Borde color naranja */
+    border-style: solid; /* Borde sólido */
+    padding-left: 5px; /* Padding a la izquierda */
+    padding-right: 5px; /* Padding a la derecha */
+    position: relative;
+    z-index: 2; /* Coloco este elemento por encima de otros */
 }
 
-.createUsers{
+/* Estilos para la sección de crear usuarios */
+.createUsers {
+    /* Estilo similar al de .createAdmin, solo que con margen izquierdo */
     background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(6px);
     color: white;
     grid-area: createUsers;
     padding: 30px;
-    justify-items: center;
-    justify-content: center;
     justify-items: center;
     text-align: center;
     margin-left: 10px;
@@ -144,81 +156,118 @@ main {
     margin-top: 10px;
     font-family: "Space Mono", serif;
     font-weight: 400;
-    font-style: italic; 
+    font-style: italic;
     border-radius: 5px;
     border-color: #fcaf5c;
     border-style: solid;
     padding-left: 5px;
-    padding-right: 5px;  
+    padding-right: 5px;
+    position: relative;
+    z-index: 2;
 }
 
+/* Estilos para el botón de ir al login */
 .goLogin {
-    grid-area: goLogin;
-    display: flex; 
-    justify-content: center; 
+    grid-area: goLogin; /* Coloco el área correspondiente */
+    display: flex; /* Uso flexbox para alinear el contenido */
+    justify-content: center; /* Alineo al centro */
+    justify-self: center; /* Alineo este elemento en su celda */
+    align-items: center; /* Alineo verticalmente */
+    padding: 20px; /* Padding para darle espacio */
+    background-color: #fcaf5c; /* Fondo naranja */
+    margin-top: 5px; /* Margen superior */
+    font-family: "Space Mono", serif; /* Fuente "Space Mono" */
+    font-weight: 700; /* Negrita */
+    font-style: normal; /* Estilo normal */
+    border-radius: 5px; /* Bordes redondeados */
+    padding-left: 5px; /* Padding a la izquierda */
+    padding-right: 5px; /* Padding a la derecha */
+    border-color: #18364d; /* Borde oscuro */
+    border-style: solid; /* Borde sólido */
+    position: relative;
+    z-index: 3; /* Este botón se coloca encima de otros */
+}
+
+/* Estilos para los inputs (campos de texto) */
+input {
+    position: relative;  /* Necesario para usar z-index */
+    z-index: 10;  /* Los inputs están al frente */
+    display: flex;
+    justify-content: center;
     justify-self: center;
-    align-items: center; 
-    padding: 20px;
-    background-color: #fcaf5c;
-    margin-top: 5px;
+    align-items: center;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
     font-family: "Space Mono", serif;
     font-weight: 700;
     font-style: normal;
-    border-radius: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
-    border-color: #18364d;
-    border-style: solid;
-}
-
-input{
-border-radius: 5px;
-text-align: center;
-padding: 5px;
-font-family: "Space Mono", serif;
-    font-weight: 700;
-    font-style: normal;
-    text-align: center;
     color: #18364d;
     border-color: #fcaf5c;
     border-style: solid;
     background-color: wheat;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: all 0.3s ease; /* Transición suave */
 }
 
-::placeholder{
-    font-family: "Space Mono", serif;
-    font-weight: 700;
-    font-style: normal;
-    text-align: center;
-    color: #18364d;
+/* Estilos para cuando el input está enfocado */
+input:focus {
+    border-color: #18364d; /* Cambio de color en el borde cuando está enfocado */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Sombra más fuerte */
+    outline: none; /* Quito el borde de enfoque por defecto */
+    z-index: 20;  /* El input está por encima de otros elementos cuando tiene foco */
 }
 
-button{
+/* Estilos para los botones */
+button {
+    position: relative;  /* Necesario para usar z-index */
+    z-index: 5;  /* Los botones tienen prioridad, pero menos que los inputs */
     font-family: "Space Mono", serif;
     font-weight: 700;
     font-style: normal;
     border-radius: 5px;
-    padding: 5px;
-    margin-top: 10px;
+    padding: 10px 20px;
+    margin-top: 60px;
     font-size: medium;
     border-color: #fcaf5c;
     border-style: solid;
+    background-color: #18364d;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave cuando pasa el mouse */
 }
 
-label{
-    font-size: 18px;
-    padding: 15px;
-    margin-top: 10px;
-    font-weight: bold;
-    background-color: rgba(252, 175, 92, 0.8);
-    border-radius: 10px;
+/* Estilos para el botón cuando pasa el mouse sobre él */
+button:hover {
+    background-color: #fcaf5c; /* Fondo naranja cuando pasa el mouse */
+    color: #18364d; /* Cambio el color del texto a oscuro */
+    z-index: 15;  /* El botón está encima de los inputs en hover */
 }
-.contContra{
+
+/* Estilos para las etiquetas de los campos de entrada */
+label {
+    font-size: 18px; /* Tamaño de fuente */
+    padding: 15px; /* Espaciado alrededor del texto */
+    margin-top: 10px; /* Margen superior */
+    font-weight: bold; /* Negrita */
+    background-color: rgba(252, 175, 92, 0.4); /* Fondo con transparencia */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilo para contenedores de contraseñas */
+.contContra {
     position: relative;
-    top: 30px;
+    top: 40px; /* Desplazo el contenedor hacia abajo */
 }
 
-a{
-    text-decoration: none;
-    color: #18364d;
+/* Estilos para los enlaces */
+a {
+    text-decoration: none; /* Quiero que los enlaces no tengan subrayado */
+    color: #18364d; /* Color oscuro para los enlaces */
+}
+
+/* Estilos para las ventanas emergentes */
+.swal2-popup {
+    z-index: 1050; /* Ajusto el índice z de la ventana emergente */
 }

@@ -1,67 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Establezco la codificación de caracteres en UTF-8 para asegurar que todos los caracteres especiales se muestren correctamente -->
     <meta charset="UTF-8">
+   
+    <!-- Configuro la vista para dispositivos móviles, asegurándome de que la página sea responsiva y se adapte a diferentes tamaños de pantalla -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!-- Titulo que aparece en la pestaña del navegador -->
     <title>Main Page Administrator</title>
+   
+    <!-- Vinculo al archivo CSS con los estilos para la página del administrador -->
     <link rel="stylesheet" href="../styles/mainPageAdmin.css">
+   
+    <!-- Conexión a Google Fonts para poder usar fuentes personalizadas -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Lexend:wght@100..900&family=Matemasie&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Lexend:wght@100..900&family=Matemasie&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+   
+    <!-- Incluyo el CDN de SweetAlert2, una librería para mostrar alertas interactivas -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
+    <!-- Encabezado principal de la página del administrador -->
     <header>
-        <h2>Administrador</h2>
-        <h3 id="claveVerificarAdmin">Clave para validar autorización de admin</h3>
+        <!-- Título principal que indica que estamos en la página de solicitudes -->
         <h1>Solicitudes</h1>
+       
+        <!-- Elemento donde se insertará el nombre del administrador -->
+        <h2 id="adminName">Administrador</h2>
+       
+        <!-- Enlace a otra página para ir a las estadísticas y al buscador de solicitudes -->
+        <a href="staticsAndSearch.html" id="linkStaticsAndSearch">
+            <h2> Ir a estadisticas y buscador de solicitudes</h2>
+        </a>
     </header>
+   
     <main>
+        <!-- Sección para mostrar las solicitudes pendientes que el administrador aún no ha revisado -->
         <section id="pendingRequestsSection">
             <h3>Solicitudes pendientes</h3>
             <ul id="pendingRequestsList">
-                <!-- Aquí se cargarán las solicitudes pendientes con JS -->
+                <!-- Aquí se cargarán las solicitudes pendientes mediante JavaScript -->
             </ul>
         </section>
-
-        <section id="viewRequestSection">
-            <h3>Visualizar solicitud</h3>
-            <div id="containerApproveReject">
-                <div id="departureDate">Fecha Salida</div>
-                <div id="returnDate">Fecha Entrada</div>
-                <div id="computerCode">Código Computadora</div>
-                <div id="useR">Usuario</div>
-                <input type="text" id="commentRequest" placeholder="Comentar">
-                <input type="text" id="userAuthKeyApproval" placeholder="Clave de autorización">
-                <button id="approveButton">Aprobar</button>
-                <button id="denyButton">Denegar</button>
-            </div>
-        </section>
-
+       
+        <!-- Sección para mostrar el historial de solicitudes del administrador -->
         <section id="searchAndHistory">
-            <div id="searchSection">
-                <h3>Buscador</h3>
-                <input type="text" id="keywordSearch" placeholder="Palabra clave">
-                <input type="checkbox" id="requesterCheckbox"> Persona que solicita
-                <input type="checkbox" id="departureCheckbox"> Fecha de salida
-                <input type="checkbox" id="returnCheckbox"> Fecha de regreso
-                <input type="checkbox" id="computerCodeCheckbox"> Código de computadora
-                <input type="checkbox" id="statusCheckbox"> Estado de la solicitud
-            </div>
-
             <div id="historySection">
                 <h3>Historial de solicitudes</h3>
+               
+                <!-- Sección donde se mostrarán las solicitudes que han sido revisadas por el administrador actual -->
                 <div id="currentAdminRequests">
                     <h3>Solicitudes revisadas por administrador actual</h3>
                     <ul id="currentAdminList"></ul>
                 </div>
+               
+                <!-- Sección para mostrar las solicitudes que fueron revisadas por otros administradores -->
                 <div id="otherAdminsRequests">
                     <h3>Solicitudes revisadas por otros administradores</h3>
                     <ul id="otherAdminList"></ul>
                 </div>
             </div>
         </section>
+
+        <!-- Sección para mostrar las estadísticas generales sobre las solicitudes -->
+        <section id="statisticsContainer">
+            <h3>Estadísticas</h3>
+            <div id="staticsContainer">
+                <!-- Muestra el total de solicitudes -->
+                <p id="totalRequests">Total de solicitudes: 0</p>
+                <!-- Muestra las solicitudes por cada estudiante -->
+                <ul id="requestsPerStudent"></ul>
+            </div>
+        </section>
     </main>
-    <script type="module" src="mainPageAdmin.js"></script>
+   
+    <!-- Vinculo al archivo JavaScript principal de la página, que maneja la lógica de la página del administrador -->
+    <script type="module" src="../js/mainPageAdmin.js"></script>
 </body>
 </html>

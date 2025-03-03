@@ -1,0 +1,90 @@
+/* Estilos generales para la página */
+body {
+    font-family: Arial, sans-serif; /* Utilizo la fuente Arial para todo el texto en el cuerpo de la página */
+    margin: 20px; /* Le doy un margen de 20px alrededor de todo el contenido del body */
+}
+
+/* Estilos para la sección de búsqueda */
+.search-container {
+    margin-bottom: 20px; /* Agrego un margen inferior de 20px para separar la sección de búsqueda de otros elementos */
+}
+
+.search-input {
+    padding: 8px; /* Le doy un poco de espacio interno (padding) al campo de entrada para que no quede tan ajustado */
+    margin-right: 10px; /* Agrego un margen a la derecha para separar el campo de entrada del botón */
+    width: 250px; /* Defino el ancho del campo de entrada a 250px */
+}
+
+.search-btn {
+    padding: 8px 15px; /* Aplico padding para que el botón tenga un tamaño cómodo */
+    background-color: #007bff; /* El color de fondo del botón es azul */
+    color: white; /* El color del texto del botón es blanco */
+    border: none; /* No quiero borde alrededor del botón */
+    cursor: pointer; /* El cursor cambia a "puntero" cuando paso sobre el botón */
+    margin-right: 10px; /* Un margen a la derecha para separar el botón de otros elementos */
+}
+
+.search-btn:hover {
+    background-color: #0056b3; /* Cuando paso el mouse sobre el botón, cambia el color de fondo a un azul más oscuro */
+}
+
+/* Estilos para el botón de "volver" */
+.back-btn {
+    padding: 8px 15px; /* Aplico padding para que el botón tenga un tamaño adecuado */
+    background-color: #f44336; /* El color de fondo del botón de volver es rojo */
+    color: white; /* El texto del botón es blanco */
+    border: none; /* Sin borde alrededor del botón */
+    cursor: pointer; /* El cursor cambia a "puntero" cuando paso sobre el botón */
+    margin-bottom: 20px; /* Le doy un margen en la parte inferior para separar el botón de otros elementos */
+}
+
+.back-btn:hover {
+    background-color: #d32f2f; /* Cuando paso el mouse sobre el botón de volver, el color de fondo cambia a un rojo más oscuro */
+}
+
+/* Estilos para las secciones de resultados y estadísticas */
+.results-container, .statistics-container {
+    margin-top: 20px; /* Agrego un margen superior para separar estas secciones de los elementos anteriores */
+}
+
+h3 {
+    color: #333; /* El color de los encabezados (h3) será un gris oscuro */
+}
+
+/* Contenedores para las estadísticas, con bordes alrededor */
+.stat-box {
+    border: 1px solid #000; /* Un borde negro alrededor de cada caja de estadísticas */
+    padding: 10px; /* Espacio interno dentro de la caja */
+    margin-bottom: 10px; /* Margen inferior para separar las cajas entre sí */
+}
+
+.stat-box p {
+    margin: 5px 0; /* Margen superior e inferior de 5px para cada párrafo dentro de las cajas */
+}
+
+/* Contenedor para las solicitudes (requests) */
+.request-container {
+    margin-top: 20px; /* Un margen superior para separar esta sección de la anterior */
+}
+
+/* Estilos para cada elemento de solicitud individual */
+.request-item {
+    border: 1px solid #000; /* Un borde negro alrededor de cada solicitud */
+    padding: 10px; /* Espacio interno dentro de cada solicitud */
+    margin-bottom: 10px; /* Margen inferior para separar cada solicitud de la siguiente */
+}
+
+.request-item p {
+    margin: 5px 0; /* Margen superior e inferior de 5px para los párrafos dentro de las solicitudes */
+}
+
+/* Estilos para los resultados de la búsqueda */
+#searchResults p {
+    margin: 5px 0; /* Un pequeño margen en la parte superior e inferior de los párrafos dentro de los resultados */
+}
+
+/* Estilo específico para cuando no se encuentran resultados */
+.no-results {
+    font-style: italic; /* Aplico estilo en cursiva a los textos de "sin resultados" */
+    color: #777; /* El color del texto será un gris suave */
+}

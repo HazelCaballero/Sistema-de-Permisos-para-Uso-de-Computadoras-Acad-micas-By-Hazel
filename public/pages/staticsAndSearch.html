@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Defino la codificación de caracteres para asegurarme de que el texto se muestre correctamente -->
+    <meta charset="UTF-8">
+   
+    <!-- Defino la vista para dispositivos móviles, para que se adapte al tamaño de la pantalla -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!-- El título de la página, que aparece en la pestaña del navegador -->
+    <title>Administración de Solicitudes</title>
+   
+    <!-- Enlazo el archivo CSS para estilizar la página -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div>
+        <!-- Título principal de la página -->
+        <h1>Estadisticas y busqueda personalizada</h1>
+       
+        <!-- Muestra el nombre del administrador -->
+        <p id="adminName"></p>
+
+        <!-- Filtros de búsqueda para personalizar la búsqueda de solicitudes -->
+        <div class="search-container">
+            <!-- Campo de texto donde el administrador puede ingresar palabras clave para la búsqueda -->
+            <input type="text" id="keywordSearch" class="search-input" placeholder="Buscar por ID, Usuario, Fecha, etc." />
+           
+            <!-- Botón que ejecutará la búsqueda -->
+            <button id="btnSearch" class="search-btn">Buscar</button>
+           
+            <!-- Botón que reinicia la búsqueda, eliminando los filtros -->
+            <button id="btnSearchRestart" class="search-btn">Reiniciar Búsqueda</button>
+        </div>
+
+        <!-- Botón para regresar a la página anterior -->
+        <button id="btnBack" class="back-btn">Regresar</button>
+
+        <!-- Contenedor donde se mostrarán los resultados de la búsqueda -->
+        <div id="searchResultsContainer" class="results-container">
+            <!-- Título de la sección de resultados -->
+            <h3>Resultados de la Búsqueda</h3>
+            <!-- Aquí se agregarán los resultados de la búsqueda dinámicamente -->
+            <div id="searchResults"></div>
+        </div>
+
+        <!-- Sección de estadísticas que muestra información sobre las solicitudes -->
+        <div class="statistics-container">
+            <!-- Título de la sección de estadísticas -->
+            <h3>Estadísticas</h3>
+           
+            <!-- Caja que muestra el total de solicitudes -->
+            <div class="stat-box">
+                <p><strong>Total de Solicitudes:</strong> <span id="totalRequests"></span></p>
+            </div>
+
+            <!-- Caja que muestra las solicitudes por usuario -->
+            <div class="stat-box">
+                <p><strong>Solicitudes por Usuario:</strong></p>
+                <span id="requestsPerUser"></span>
+            </div>
+
+            <!-- Caja que muestra las solicitudes agrupadas por estado (Pendiente, Aprobada, Denegada) -->
+            <div class="stat-box">
+                <p><strong>Solicitudes por Estado:</strong></p>
+                <span id="requestsByStatus"></span>
+            </div>
+
+            <!-- Caja que muestra las solicitudes agrupadas por sede -->
+            <div class="stat-box">
+                <p><strong>Solicitudes por Sede:</strong></p>
+                <span id="requestsByHeadquarters"></span>
+            </div>
+        </div>
+
+        <!-- Título de la sección de historial de solicitudes -->
+        <h3>Historial de Solicitudes</h3>
+       
+        <!-- Contenedor donde se mostrarán las solicitudes históricas -->
+        <div id="requestUserContainer" class="request-container"></div>
+    </div>
+
+    <!-- Enlazo el archivo JS que maneja la lógica de estadísticas y búsqueda -->
+    <script type="module" src="../js/staticsAndSearch.js"></script>
+
+    <script>
+        // Agrego el evento al botón de regresar para que cuando el usuario haga clic, se regrese a la página anterior
+        document.getElementById('btnBack').addEventListener('click', () => {
+            window.history.back();  // Uso el método history.back() para retroceder en el historial de navegación
+        });
+    </script>
+</body>
+</html>
