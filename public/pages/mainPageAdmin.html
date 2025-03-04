@@ -1,82 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <!-- Establezco la codificación de caracteres en UTF-8 para asegurar que todos los caracteres especiales se muestren correctamente -->
+<head> 
     <meta charset="UTF-8">
-   
-    <!-- Configuro la vista para dispositivos móviles, asegurándome de que la página sea responsiva y se adapte a diferentes tamaños de pantalla -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <!-- Titulo que aparece en la pestaña del navegador -->
     <title>Main Page Administrator</title>
-   
-    <!-- Vinculo al archivo CSS con los estilos para la página del administrador -->
     <link rel="stylesheet" href="../styles/mainPageAdmin.css">
-   
-    <!-- Conexión a Google Fonts para poder usar fuentes personalizadas -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Lexend:wght@100..900&family=Matemasie&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-   
-    <!-- Incluyo el CDN de SweetAlert2, una librería para mostrar alertas interactivas -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-    <!-- Encabezado principal de la página del administrador -->
-    <header>
-        <!-- Título principal que indica que estamos en la página de solicitudes -->
-        <h1>Solicitudes</h1>
-       
-        <!-- Elemento donde se insertará el nombre del administrador -->
-        <h2 id="adminName">Administrador</h2>
-       
-        <!-- Enlace a otra página para ir a las estadísticas y al buscador de solicitudes -->
-        <a href="staticsAndSearch.html" id="linkStaticsAndSearch">
-            <h2> Ir a estadisticas y buscador de solicitudes</h2>
-        </a>
-    </header>
-   
-    <main>
-        <!-- Sección para mostrar las solicitudes pendientes que el administrador aún no ha revisado -->
-        <section id="pendingRequestsSection">
-            <h3>Solicitudes pendientes</h3>
-            <ul id="pendingRequestsList">
-                <!-- Aquí se cargarán las solicitudes pendientes mediante JavaScript -->
-            </ul>
-        </section>
-       
-        <!-- Sección para mostrar el historial de solicitudes del administrador -->
-        <section id="searchAndHistory">
-            <div id="historySection">
-                <h3>Historial de solicitudes</h3>
-               
-                <!-- Sección donde se mostrarán las solicitudes que han sido revisadas por el administrador actual -->
-                <div id="currentAdminRequests">
-                    <h3>Solicitudes revisadas por administrador actual</h3>
-                    <ul id="currentAdminList"></ul>
-                </div>
-               
-                <!-- Sección para mostrar las solicitudes que fueron revisadas por otros administradores -->
-                <div id="otherAdminsRequests">
-                    <h3>Solicitudes revisadas por otros administradores</h3>
-                    <ul id="otherAdminList"></ul>
-                </div>
+    <div class="globalContainer">
+        <header class="headerContainer">
+            <div class="header1"><h1>Solicitudes</h1></div>
+            <div class="header2"><h2 id="adminName">Administrador</h2></div>
+            <div class="header3">
+                <a href="staticsAndSearch.html" id="linkStaticsAndSearch">
+                    <h2>Estadísticas detalladas y buscador de solicitudes</h2>
+                </a>
             </div>
-        </section>
+        </header>
 
-        <!-- Sección para mostrar las estadísticas generales sobre las solicitudes -->
-        <section id="statisticsContainer">
-            <h3>Estadísticas</h3>
-            <div id="staticsContainer">
-                <!-- Muestra el total de solicitudes -->
-                <p id="totalRequests">Total de solicitudes: 0</p>
-                <!-- Muestra las solicitudes por cada estudiante -->
-                <ul id="requestsPerStudent"></ul>
-            </div>
-        </section>
-    </main>
-   
-    <!-- Vinculo al archivo JavaScript principal de la página, que maneja la lógica de la página del administrador -->
+        <main>
+            <section id="pendingRequestsSection">
+                <h3>Solicitudes pendientes</h3>
+                <ul id="pendingRequestsList">
+                    <!-- Ejemplo de solicitud -->
+                    <li>
+                        <div class="requestDetails">
+                            <p><strong>Usuario:</strong> Pamela5678</p>
+                            <p><strong>Fecha de salida:</strong> 2025-03-18</p>
+                            <p><strong>Fecha de regreso:</strong> 2025-03-30</p>
+                            <p><strong>Estado:</strong> Pendiente</p>
+                            <p><strong>Administrador:</strong> No asignado</p>
+                            <p><strong>Sede:</strong> San José</p>
+                        </div>
+                        <div class="requestButtons">
+                            <button class="approveBtn">Aprobar</button>
+                            <button class="denyBtn">Denegar</button>
+                        </div>
+                    </li>
+                    <!-- Otra solicitud -->
+                    <li>
+                        <div class="requestDetails">
+                            <p><strong>Usuario:</strong> Juan1234</p>
+                            <p><strong>Fecha de salida:</strong> 2025-04-10</p>
+                            <p><strong>Fecha de regreso:</strong> 2025-04-20</p>
+                            <p><strong>Estado:</strong> Pendiente</p>
+                            <p><strong>Administrador:</strong> No asignado</p>
+                            <p><strong>Sede:</strong> Alajuela</p>
+                        </div>
+                        <div class="requestButtons">
+                            <button class="approveBtn">Aprobar</button>
+                            <button class="denyBtn">Denegar</button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Historial de solicitudes -->
+            <section id="searchAndHistory">
+                <div id="historySection">
+                    <div id="currentAdminRequests">
+                        <h5>Solicitudes revisadas por administrador actual</h5>
+                        <ul id="currentAdminList"></ul>
+                    </div>
+                    <div id="otherAdminsRequests">
+                        <h5>Solicitudes revisadas por otros administradores</h5>
+                        <ul id="otherAdminList"></ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección de estadísticas -->
+            <section id="statisticsContainer" hidden>
+                <h3>Estadísticas</h3>
+                <div id="staticsContainer">
+                    <p id="totalRequests">Total de solicitudes: 0</p>
+                    <ul id="requestsPerStudent"></ul>
+                </div>
+            </section>
+        </main>
+    </div>
+
     <script type="module" src="../js/mainPageAdmin.js"></script>
 </body>
 </html>

@@ -1,90 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Defino la codificación de caracteres para asegurarme de que el texto se muestre correctamente -->
     <meta charset="UTF-8">
-   
-    <!-- Defino la vista para dispositivos móviles, para que se adapte al tamaño de la pantalla -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <!-- El título de la página, que aparece en la pestaña del navegador -->
     <title>Administración de Solicitudes</title>
-   
-    <!-- Enlazo el archivo CSS para estilizar la página -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles/staticsAndSearch.css">
 </head>
 <body>
-    <div>
-        <!-- Título principal de la página -->
-        <h1>Estadisticas y busqueda personalizada</h1>
-       
-        <!-- Muestra el nombre del administrador -->
-        <p id="adminName"></p>
+    <div class="global-container">
+        <header class="header-container">
+            <!-- Título principal de la página -->
+            <h1 class="page-title">Estadísticas y búsqueda personalizada</h1>
 
+            <!-- Muestra el nombre del administrador -->
+            <p id="adminName" class="admin-name">Administrador</p>  
+
+            <!-- Botón para regresar a la página anterior -->
+            <button id="btnBack" class="back-btn">Regresar</button>
+        </header>
+
+        <main class="mainContainer">
         <!-- Filtros de búsqueda para personalizar la búsqueda de solicitudes -->
         <div class="search-container">
             <!-- Campo de texto donde el administrador puede ingresar palabras clave para la búsqueda -->
             <input type="text" id="keywordSearch" class="search-input" placeholder="Buscar por ID, Usuario, Fecha, etc." />
-           
+            
             <!-- Botón que ejecutará la búsqueda -->
             <button id="btnSearch" class="search-btn">Buscar</button>
-           
+            <br>
             <!-- Botón que reinicia la búsqueda, eliminando los filtros -->
-            <button id="btnSearchRestart" class="search-btn">Reiniciar Búsqueda</button>
+            <button id="btnSearchRestart" class="search-btn">Reiniciar</button>
+            
+            <div id="searchResultsContainer" class="results-container">
+                <!-- Título de la sección de resultados -->
+                <h3 class="results-title">Resultados de la Búsqueda</h3>
+                <!-- Aquí se agregarán los resultados de la búsqueda dinámicamente -->
+                <div id="searchResults" class="search-results"></div>
+            </div>
         </div>
-
-        <!-- Botón para regresar a la página anterior -->
-        <button id="btnBack" class="back-btn">Regresar</button>
 
         <!-- Contenedor donde se mostrarán los resultados de la búsqueda -->
-        <div id="searchResultsContainer" class="results-container">
-            <!-- Título de la sección de resultados -->
-            <h3>Resultados de la Búsqueda</h3>
-            <!-- Aquí se agregarán los resultados de la búsqueda dinámicamente -->
-            <div id="searchResults"></div>
-        </div>
+        <div class="results-statistics-container">
+            
 
-        <!-- Sección de estadísticas que muestra información sobre las solicitudes -->
-        <div class="statistics-container">
-            <!-- Título de la sección de estadísticas -->
-            <h3>Estadísticas</h3>
-           
-            <!-- Caja que muestra el total de solicitudes -->
-            <div class="stat-box">
-                <p><strong>Total de Solicitudes:</strong> <span id="totalRequests"></span></p>
-            </div>
+            <!-- Sección de estadísticas que muestra información sobre las solicitudes -->
+            <div class="statistics-container">
+                <!-- Título de la sección de estadísticas -->
+                <h3 class="statistics-title">Estadísticas</h3>
+                
+                <!-- Caja que muestra el total de solicitudes -->
+                <div class="stat-box stat-total-requests">
+                    <p><strong>Total de Solicitudes:</strong> <span id="totalRequests" class="stat-value"></span></p>
+                </div>
 
-            <!-- Caja que muestra las solicitudes por usuario -->
-            <div class="stat-box">
-                <p><strong>Solicitudes por Usuario:</strong></p>
-                <span id="requestsPerUser"></span>
-            </div>
+                <!-- Caja que muestra las solicitudes por usuario -->
+                <div class="stat-box stat-requests-per-user">
+                    <p><strong>Solicitudes por Usuario:</strong></p>
+                    <span id="requestsPerUser" class="stat-value"></span>
+                </div>
 
-            <!-- Caja que muestra las solicitudes agrupadas por estado (Pendiente, Aprobada, Denegada) -->
-            <div class="stat-box">
-                <p><strong>Solicitudes por Estado:</strong></p>
-                <span id="requestsByStatus"></span>
-            </div>
+                <!-- Caja que muestra las solicitudes agrupadas por estado (Pendiente, Aprobada, Denegada) -->
+                <div class="stat-box stat-requests-by-status">
+                    <p><strong>Solicitudes por Estado:</strong></p>
+                    <span id="requestsByStatus" class="stat-value"></span>
+                </div>
 
-            <!-- Caja que muestra las solicitudes agrupadas por sede -->
-            <div class="stat-box">
-                <p><strong>Solicitudes por Sede:</strong></p>
-                <span id="requestsByHeadquarters"></span>
+                <!-- Caja que muestra las solicitudes agrupadas por sede -->
+                <div class="stat-box stat-requests-by-headquarters">
+                    <p><strong>Solicitudes por Sede:</strong></p>
+                    <span id="requestsByHeadquarters" class="stat-value"></span>
+                </div>
             </div>
         </div>
-
-        <!-- Título de la sección de historial de solicitudes -->
-        <h3>Historial de Solicitudes</h3>
-       
+        <div class="historuContainer">
+          <!-- Título de la sección de historial de solicitudes -->
+        <h3 class="history-title">Historial de Solicitudes</h3>
+        
         <!-- Contenedor donde se mostrarán las solicitudes históricas -->
-        <div id="requestUserContainer" class="request-container"></div>
+        <div id="requestUserContainer" class="request-container"></div>  
+        
     </div>
-
+        
+    </div>
+ 
+</main>
     <!-- Enlazo el archivo JS que maneja la lógica de estadísticas y búsqueda -->
     <script type="module" src="../js/staticsAndSearch.js"></script>
 
     <script>
         // Agrego el evento al botón de regresar para que cuando el usuario haga clic, se regrese a la página anterior
+        // lo hice desde aca porque no estaba segura de como no perder el estar logueado
         document.getElementById('btnBack').addEventListener('click', () => {
             window.history.back();  // Uso el método history.back() para retroceder en el historial de navegación
         });

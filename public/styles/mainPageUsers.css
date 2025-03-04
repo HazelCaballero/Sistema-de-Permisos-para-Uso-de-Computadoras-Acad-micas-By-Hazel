@@ -1,5 +1,215 @@
-#headquartersContainer {
-    display: none;  /* Oculta el elemento */
+/* Estilos globales */
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Asegurarme terminar css
+body {
+    font-family: 'Space Mono', serif;
+    background-image: url('../img/technology.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+/* Contenedor global */
+.globalContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Estilo de encabezado */
+header {
+    width: 80%;
+    display: flex;
+    padding: 10px 5px;
+    background-color: #fcaf5c;
+    border-style: solid;
+    border-color: #18364d;
+    color: #18364d;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+/* Estilo del contenido principal */
+main {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+/* Formulario */
+.formContainer {
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo negro opaco (80%) */
+    padding: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    color: white; /* Color blanco en los textos del formulario */
+    border-color: #fcaf5c;
+    border-style: solid;
+}
+
+/* Título del formulario */
+.formularioTitle {
+    text-align: center;
+    margin-bottom: 5px; 
+}
+
+/* Campos del formulario */
+.form__group {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los inputs */
+}
+
+/* Estilos de los inputs y selects */
+.form__group input,
+.form__group select {
+    font-size: 1rem;
+    border: 1px solid #fcaf5c;
+    border-radius: 4px;
+    height: 34px;
+    width: 50%; /* Ajusta el ancho para centrarlos sin modificar su tamaño */
+    text-align: center;
+}
+
+/* Requisitos - Coloca los términos en la segunda columna */
+.form__infoList {
+    font-size: 0.9rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo negro opaco */
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border-color: #fcaf5c;
+    border-style: solid;
+}
+
+/* Estilos de la lista */
+ul {
+    margin-bottom: 20px;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Alineación de checkbox y botón de enviar */
+.form__checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form__checkbox-container label {
+    margin-right: 10px;
+    color: white;
+}
+
+form button {
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: #4CAF50;
+    color: white; /* Color blanco en el botón */
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 80px;
+    display: flex;
+    justify-self: center;
+    text-align: center;
+    margin: 10px;
+}
+
+form button:hover:not(:disabled) {
+    background-color: #45a049;
+}
+
+/* Contenedor de historial */
+.historyContainer {
+    width: 35%;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro opaco (80%) */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    height: 800px;
+    color: white; /* Color blanco en los textos del historial */
+    border-color: #fcaf5c;
+    border-style: solid;
+}
+
+/* Título del contenedor de historial */
+.historyContainer__title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+
+#requestUserPending p, #requestUserContainer p {
+    font-size: 1rem;
+    color: white; /* Color blanco en los textos dentro de los contenedores */
+    border-style: solid;
+    border-color: #18364d;
+    text-align: center;
+    background-color: #fcaf5c;
+}
+
+/* Estilos del formulario */
+.form__group {
+    margin-bottom: 2px;
+}
+
+.form__label {
+    font-weight: bold;
+    color: white; /* Color blanco en las etiquetas del formulario */
+}
+
+
+.form__infoListItems {
+    color: white; /* Color blanco en los elementos de la lista */
+}
+
+/* Alineación de checkbox y botón */
+.form__checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form__checkbox-container label {
+    margin-right: 10px;
+    color: white; /* Color blanco en las etiquetas de checkbox */
+}
+
+.form__submitButton {
+    width: auto;
+    background-color: #4CAF50;
+    color: white; /* Color blanco en el texto del botón */
+    border: none;
+}
+
+.form__submitButton:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+.form__submitButton:hover:not(:disabled) {
+    background-color: #45a049;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}

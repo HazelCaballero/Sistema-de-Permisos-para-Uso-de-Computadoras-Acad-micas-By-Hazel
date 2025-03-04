@@ -67,12 +67,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Si hay solicitudes pendientes, las agregamos a la lista en la interfaz
         pendingRequests.forEach(request => {
             const listItem = document.createElement('li');
+            listItem.classList.add('request-item'); // Clase para el item de la solicitud
             listItem.innerHTML = `
-                Usuario: ${request.userId} |
-                Fecha de salida: ${request.departureDate} |
-                Fecha de regreso: ${request.returnDate} |
-                Estado: ${request.status} |
-                Administrador: ${request.adminId || 'No asignado'} |
+                Usuario: ${request.userId} | 
+                Fecha de salida: ${request.departureDate} | 
+                Fecha de regreso: ${request.returnDate} | 
+                Estado: ${request.status} | 
+                Administrador: ${request.adminId || 'No asignado'} | 
                 Sede: ${request.headquarters}
                 <button class="approveBtn" data-id="${request.id}">Aprobar</button>
                 <button class="denyBtn" data-id="${request.id}">Denegar</button>
@@ -97,7 +98,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             console.log('Solicitud actualizada:', updatedRequest);
 
             // Actualizamos el estado de la solicitud en el arreglo allRequests
-            allRequests = allRequests.map(request =>
+            allRequests = allRequests.map(request => 
                 request.id === updatedRequest.id ? updatedRequest : request
             );
 
@@ -153,10 +154,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         requestsPerStudent.innerHTML = '';
         Object.entries(perStudent).forEach(([userId, data]) => {
             const li = document.createElement('li');
+            li.classList.add('student-request-item'); // Clase para el item de solicitudes por estudiante
             li.innerHTML = `Usuario: ${userId} | Total solicitudes: ${data.totalRequests} | Aprobadas: ${data.totalApproved} | Denegadas: ${data.totalDenied}`;
             data.requests.forEach(request => {
                 li.innerHTML += `
-                    <ul>
+                    <ul class="request-details">
                         <li>Fecha de salida: ${request.departureDate}</li>
                         <li>Fecha de regreso: ${request.returnDate}</li>
                         <li>Sede: ${request.headquarters}</li>
@@ -171,6 +173,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // Mostramos la cantidad de solicitudes por estado
         const statusList = document.createElement('ul');
+        statusList.classList.add('status-list');
         Object.entries(statusCount).forEach(([status, count]) => {
             const statusItem = document.createElement('li');
             statusItem.textContent = `${status}: ${count}`;
@@ -195,6 +198,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Mostramos las solicitudes gestionadas por este administrador
         currentAdminRequestsList.forEach(request => {
             const listItem = document.createElement('li');
+            listItem.classList.add('history-item');
             listItem.textContent = `Usuario: ${request.userId} | Fecha de salida: ${request.departureDate} | Fecha de regreso: ${request.returnDate}`;
             currentAdminRequests.appendChild(listItem);
         });
@@ -202,6 +206,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Mostramos las solicitudes gestionadas por otros administradores
         otherAdminsRequestsList.forEach(request => {
             const listItem = document.createElement('li');
+            listItem.classList.add('history-item');
             listItem.textContent = `Usuario: ${request.userId} | Fecha de salida: ${request.departureDate} | Fecha de regreso: ${request.returnDate} | Administrador: ${request.adminId}`;
             otherAdminsRequests.appendChild(listItem);
         });

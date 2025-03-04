@@ -1,40 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Establezco la codificación de caracteres en UTF-8 para asegurar que los caracteres especiales se muestren correctamente -->
     <meta charset="UTF-8">
-    
-    <!-- Hago que la página sea responsiva, adaptándose a diferentes tamaños de pantallas (principalmente móviles) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Titulo que aparecerá en la pestaña del navegador -->
     <title>Login Page</title>
-    
-    <!-- Vinculo al archivo CSS que contiene los estilos de la página de inicio de sesión -->
     <link rel="stylesheet" href="../styles/loginPage.css">
-    
-    <!-- Conexión a Google Fonts para usar fuentes personalizadas en la página -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Importo varias fuentes de Google Fonts que se utilizarán en la página -->
     <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Lexend:wght@100..900&family=Matemasie&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    
     <!-- Incluyo el CDN de SweetAlert2, una librería para mostrar alertas interactivas -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
+   <div class="globalContainer">
     <!-- Encabezado que contiene el título principal de la página -->
     <header>
         <h1>Iniciar sesión</h1>
     </header>
     
     <!-- Contenedor principal del formulario de inicio de sesión -->
-    <main>
+    <main class="mainContainer">
         <!-- Sección para el inicio de sesión como administrador -->
-        <div class="loginAccount">
+        <div class="loginAccountAdmin">
             <!-- Título que indica el inicio de sesión para un administrador específico -->
-            <h2>Iniciar sesión como administrador Hazel1234</h2>
+            <h2>Iniciar sesión como administrador</h2>
             
             <!-- Campo de texto para el ID de usuario del administrador -->
             <input type="text" id="loginAdminId" placeholder="ID de Usuario" required>
@@ -50,9 +39,9 @@
         </div>
         
         <!-- Sección para el inicio de sesión como solicitante -->
-        <div class="loginAccount" id="loginUser">
+        <div class="loginAccountUser" id="loginUser">
             <!-- Título que indica el inicio de sesión para un solicitante específico -->
-            <h2>Iniciar sesión como Solicitante Pamela5678</h2>
+            <h2>Iniciar sesión como Solicitante </h2>
             
             <!-- Campo de texto para el ID de usuario del solicitante -->
             <input type="text" id="loginUserId" placeholder="ID de Usuario" required>
@@ -67,7 +56,7 @@
             <a href="mainPageUsers.html" id="linkMainPageUsers"></a>
         </div>
     </main>
-    
+    </div> 
     <!-- Vinculo al archivo JavaScript que contiene la lógica de inicio de sesión y redirección -->
     <script type="module" src="../js/loginPage.js"></script>
 </body>

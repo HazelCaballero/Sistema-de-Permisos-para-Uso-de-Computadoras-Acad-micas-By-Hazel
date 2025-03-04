@@ -1,90 +1,309 @@
-/* Estilos generales para la página */
+/* Estilos para las fuentes personalizadas con "Space Mono" */
+.space-mono-regular {
+    font-family: "Space Mono", serif; /* Usando la fuente Space Mono con peso regular (400) */
+    font-weight: 400; /* Peso normal para la fuente */
+    font-style: normal; /* Sin estilo en cursiva */
+}
+
+.space-mono-bold {
+    font-family: "Space Mono", serif; /* Usando la fuente Space Mono con peso negrita (700) */
+    font-weight: 700; /* Peso negrita para la fuente */
+    font-style: normal; /* Sin estilo en cursiva */
+}
+
+.space-mono-regular-italic {
+    font-family: "Space Mono", serif; /* Usando la fuente Space Mono con peso regular (400) */
+    font-weight: 400; /* Peso normal */
+    font-style: italic; /* Estilo en cursiva */
+}
+
+.space-mono-bold-italic {
+    font-family: "Space Mono", serif; /* Usando la fuente Space Mono con peso negrita (700) */
+    font-weight: 700; /* Peso negrita */
+    font-style: italic; /* Estilo en cursiva */
+}
+
 body {
-    font-family: Arial, sans-serif; /* Utilizo la fuente Arial para todo el texto en el cuerpo de la página */
-    margin: 20px; /* Le doy un margen de 20px alrededor de todo el contenido del body */
+    background-image: url('../img/technology.jpg'); /* Aplico una imagen de fondo */
+    background-size: cover; /* Aseguro que la imagen cubra toda el área */
+    background-repeat: no-repeat; /* Evito que la imagen se repita */
 }
 
-/* Estilos para la sección de búsqueda */
-.search-container {
-    margin-bottom: 20px; /* Agrego un margen inferior de 20px para separar la sección de búsqueda de otros elementos */
+/* Encabezado */
+.header-container {
+    background-color: #fcaf5c; /* Fondo rojo para el encabezado */
+    padding: 15px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 300px 3fr 1fr; /* Distribuye las columnas */
+    grid-template-rows: 90px; /* Altura de la fila */
+    grid-gap: 10px; /* Espacio entre los elementos */
+    justify-items: center;
+    font-family: "Space Mono", serif; /* Usando la fuente Space Mono con peso negrita (700) */
+    font-weight: 700; /* Peso negrita */
+    font-style: italic; /* Estilo en cursiva */
 }
 
-.search-input {
-    padding: 8px; /* Le doy un poco de espacio interno (padding) al campo de entrada para que no quede tan ajustado */
-    margin-right: 10px; /* Agrego un margen a la derecha para separar el campo de entrada del botón */
-    width: 250px; /* Defino el ancho del campo de entrada a 250px */
+/* Título principal */
+.page-title {
+    color:  #18364d;
+    padding: 10px;
+    text-align: center;
+    grid-column: 2; /* Coloca el título en la segunda columna */
+    grid-row: 1; /* Coloca el título en la primera fila */
+    width: 600px;
 }
 
-.search-btn {
-    padding: 8px 15px; /* Aplico padding para que el botón tenga un tamaño cómodo */
-    background-color: #007bff; /* El color de fondo del botón es azul */
-    color: white; /* El color del texto del botón es blanco */
-    border: none; /* No quiero borde alrededor del botón */
-    cursor: pointer; /* El cursor cambia a "puntero" cuando paso sobre el botón */
-    margin-right: 10px; /* Un margen a la derecha para separar el botón de otros elementos */
+/* Nombre del administrador */
+.admin-name {
+    color: #18364d;
+    font-size: 25px;
+    padding: 8px;
+    text-align: center;
+    grid-column: 1; /* Coloca el nombre del admin en la primera columna */
+    grid-row: 1; /* Coloca el nombre del admin en la primera fila */
 }
 
-.search-btn:hover {
-    background-color: #0056b3; /* Cuando paso el mouse sobre el botón, cambia el color de fondo a un azul más oscuro */
-}
-
-/* Estilos para el botón de "volver" */
+/* Botón de regreso */
 .back-btn {
-    padding: 8px 15px; /* Aplico padding para que el botón tenga un tamaño adecuado */
-    background-color: #f44336; /* El color de fondo del botón de volver es rojo */
-    color: white; /* El texto del botón es blanco */
-    border: none; /* Sin borde alrededor del botón */
-    cursor: pointer; /* El cursor cambia a "puntero" cuando paso sobre el botón */
-    margin-bottom: 20px; /* Le doy un margen en la parte inferior para separar el botón de otros elementos */
+    background-color:  #18364d; /* Botón rojo */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    grid-column: 3; /* Coloca el botón en la tercera columna */
+    grid-row: 1; /* Coloca el botón en la primera fila */
+    justify-self: center; /* Centra el botón horizontalmente */
+    align-self: center; /* Centra el botón verticalmente */
+    font-family: "Space Mono", serif; /* Usando la fuente Space Mono con peso negrita (700) */
+    font-weight: 700; /* Peso negrita */
+    font-style: italic; /* Estilo en cursiva */
 }
 
-.back-btn:hover {
-    background-color: #d32f2f; /* Cuando paso el mouse sobre el botón de volver, el color de fondo cambia a un rojo más oscuro */
+/* Contenedor de búsqueda */
+.search-container {
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo con transparencia */
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #fcaf5c;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30px 25px 25px 1fr;
+    width: 100%;
+    height: 540px;
+    justify-content: center;
+    justify-items: center;
+    
 }
 
-/* Estilos para las secciones de resultados y estadísticas */
-.results-container, .statistics-container {
-    margin-top: 20px; /* Agrego un margen superior para separar estas secciones de los elementos anteriores */
+/* Campo de búsqueda */
+.search-input {
+    background-color:  #fcaf5c; /* Fondo amarillo claro para el campo de texto */
+    color:#18364d;
+    padding: 10px;
+    width: 80%;
+    border-radius: 5px;
+    text-align: center;
+}
+::placeholder{
+    color:#18364d;
 }
 
-h3 {
-    color: #333; /* El color de los encabezados (h3) será un gris oscuro */
+/* Botones de búsqueda */
+.search-btn {
+    background-color:  #18364d; /* Botón rojo */
+    color: white;
+    border: none;
+    cursor: pointer; 
+    border-radius: 5px;
+    width: 80px;
+    height: 30px;
+    margin: 10px;
 }
 
-/* Contenedores para las estadísticas, con bordes alrededor */
+/* Contenedor de resultados de búsqueda */
+.results-container {
+    background-color: #fcaf5c; /* Fondo beige para los resultados de la búsqueda */
+    padding: 15px;
+    margin-bottom: 20px;
+    height: 390px; /* Agregar un max-height */
+    overflow-y: auto; /* Habilitar scroll solo cuando el contenido excede */
+    width: 380px;
+    text-align: center;
+    border-radius: 5px;
+    border-color: #18364d;
+    font-family: "Space Mono", serif; /* Usando la fuente Space Mono con peso negrita (700) */
+    font-weight: 700; /* Peso negrita para la fuente */
+    font-style: normal; /* Sin estilo en cursiva */
+}
+
+/* Contenedor de estadísticas */
+.statistics-container {
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo con transparencia */
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #fcaf5c;
+    color: white;
+    padding: 8px;
+    justify-content: center;
+    justify-items: center;
+    width: 390px;
+    height: 565px;
+}
+
+/* Caja de estadísticas */
 .stat-box {
-    border: 1px solid #000; /* Un borde negro alrededor de cada caja de estadísticas */
-    padding: 10px; /* Espacio interno dentro de la caja */
-    margin-bottom: 10px; /* Margen inferior para separar las cajas entre sí */
+    border-radius: 5px;
+    width: 260px;
+    text-align: center; 
 }
 
-.stat-box p {
-    margin: 5px 0; /* Margen superior e inferior de 5px para cada párrafo dentro de las cajas */
+/* Total de Solicitudes */
+.stat-total-requests {
+    background-color:  #18364d; /* Fondo rojo claro para la caja de "Total de Solicitudes" */
+    border-radius: 5px;
+ 
 }
 
-/* Contenedor para las solicitudes (requests) */
+/* Solicitudes por Usuario */
+.stat-requests-per-user {
+    background-color:  #18364d; /* Fondo verde claro para la caja de "Solicitudes por Usuario" */
+    border-radius: 5px;
+}
+
+/* Solicitudes por Estado */
+.stat-requests-by-status {
+    background-color:  #18364d; /* Fondo amarillo claro para la caja de "Solicitudes por Estado" */
+    border-radius: 5px;
+}
+
+/* Solicitudes por Sede */
+.stat-requests-by-headquarters {
+    background-color: #18364d; /* Fondo lavanda claro para la caja de "Solicitudes por Sede" */
+    border-radius: 5px;
+}
+
+.historuContainer {
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo con transparencia */
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #fcaf5c;
+    color: white;
+    padding: 10px;
+    height: 560px;
+}
+
+/* Título del historial de solicitudes */
+.history-title {
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Contenedor de historial de solicitudes */
 .request-container {
-    margin-top: 20px; /* Un margen superior para separar esta sección de la anterior */
+    padding: 15px;
+    margin-top: 20px;
+    max-height: 435px; /* Limitar altura */
+    overflow-y: auto; /* Agregar scroll solo cuando el contenido excede */
 }
 
-/* Estilos para cada elemento de solicitud individual */
+/* Estilo base para los elementos de solicitud */
 .request-item {
-    border: 1px solid #000; /* Un borde negro alrededor de cada solicitud */
-    padding: 10px; /* Espacio interno dentro de cada solicitud */
-    margin-bottom: 10px; /* Margen inferior para separar cada solicitud de la siguiente */
+    background-color: #f0f8ff; /* Fondo azul claro */
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
 }
 
-.request-item p {
-    margin: 5px 0; /* Margen superior e inferior de 5px para los párrafos dentro de las solicitudes */
+/* Estilo específico para los resultados de búsqueda */
+.search-result-item {
+    background-color:  #18364d; /* Fondo beige */
+    padding: 10px;
+    border-radius: 5px;
 }
 
-/* Estilos para los resultados de la búsqueda */
-#searchResults p {
-    margin: 5px 0; /* Un pequeño margen en la parte superior e inferior de los párrafos dentro de los resultados */
+/* Estilo específico para las solicitudes históricas */
+.historical-request-item {
+    background-color:  #fcaf5c; /* Fondo lavanda */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
 }
 
-/* Estilo específico para cuando no se encuentran resultados */
-.no-results {
-    font-style: italic; /* Aplico estilo en cursiva a los textos de "sin resultados" */
-    color: #777; /* El color del texto será un gris suave */
+/* Contenedor de los detalles de la solicitud */
+.request-details {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+}
+
+/* Estilo para el mensaje de "sin resultados" */
+.no-results-message {
+    color: #470b01; /* Color rojo para el mensaje */
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Estilo para las estadísticas de los usuarios */
+.user-request-item {
+    font-size: 1em;
+    color: #ffffff;
+    margin: 5px 0;
+}
+
+/* Estilo para las estadísticas de los estados */
+.status-count {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+/* Estilo para las estadísticas de las sedes */
+.headquarters-count {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+/* Ajustes para el contenedor principal */
+.mainContainer {
+    display: flex; /* Usar flexbox para distribuir los elementos en fila */
+    justify-content: space-between; /* Espacio entre los elementos */
+    gap: 20px; /* Espacio entre los contenedores */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas si es necesario */
+}
+
+/* Aseguramos que cada contenedor dentro de mainContainer ocupe un ancho adecuado */
+.search-container, .results-statistics-container, .historuContainer {
+    flex: 1; /* Cada contenedor ocupará el mismo espacio */
+    min-width: 300px; /* Mínimo de 300px de ancho para asegurar que no se hagan demasiado pequeños */
+    max-width: 33%; /* Asegura que no ocupen más de un tercio del contenedor padre */
+}
+
+.results-title{
+    color: #18364d;
+}
+
+.statistics-title{
+    background-color: #fcaf5c;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    color: #18364d;
+    font-size: 20px;
+}
+
+.history-title{
+    background-color: #fcaf5c;
+    border-radius: 5px;
+    text-align: center;
+    color: #18364d;
+    font-size: 20px;
 }

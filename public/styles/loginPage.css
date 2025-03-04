@@ -1,1 +1,199 @@
-/* Asegurare terminar css
+/* Estilos para las fuentes personalizadas con "Space Mono" */
+.space-mono-regular {
+    font-family: "Space Mono", serif; /* Usando la fuente Space Mono con peso regular (400) */
+    font-weight: 400; /* Peso normal para la fuente */
+    font-style: normal; /* Sin estilo en cursiva */
+}
+
+.space-mono-bold {
+    font-family: "Space Mono", serif; /* Usando la fuente Space Mono con peso negrita (700) */
+    font-weight: 700; /* Peso negrita para la fuente */
+    font-style: normal; /* Sin estilo en cursiva */
+}
+
+.space-mono-regular-italic {
+    font-family: "Space Mono", serif; /* Usando la fuente Space Mono con peso regular (400) */
+    font-weight: 400; /* Peso normal */
+    font-style: italic; /* Estilo en cursiva */
+}
+
+.space-mono-bold-italic {
+    font-family: "Space Mono", serif; /* Usando la fuente Space Mono con peso negrita (700) */
+    font-weight: 700; /* Peso negrita */
+    font-style: italic; /* Estilo en cursiva */
+}
+
+/* Estilos globales, reseteo márgenes para todo el sitio */
+* {
+    margin: 0px; /* Elimino márgenes de todos los elementos para tener un diseño consistente */
+}
+
+/* Estilos para el fondo del body */
+body {
+    background-image: url('../img/technology.jpg'); /* Aplico una imagen de fondo */
+    background-size: cover; /* Aseguro que la imagen cubra toda el área */
+    background-repeat: no-repeat; /* Evito que la imagen se repita */
+}
+
+/* Contenedor principal para organizar el layout con grid */
+.globalContainer {
+    padding: 10px; /* Agrego un poco de espacio interno al contenedor */
+    display: grid; /* Uso grid para organizar los elementos en una cuadrícula */
+    grid-template-columns: 1fr; /* Solo una columna en el diseño */
+    grid-template-rows: 90px 480px; /* Defino las alturas de las filas */
+    grid-template-areas:
+        "header header" /* El encabezado ocupará toda la fila */
+        "main main"; /* El área principal ocupará el resto */
+    justify-items: center; /* Alineo los elementos dentro de las celdas al centro */
+}
+
+
+/* Estilos para el encabezado */
+header {
+    grid-area: header; /* Coloco el header en el área correspondiente */
+    background-color: #fcaf5c; /* Fondo de color naranja */
+    margin-bottom: 20px; /* Margen inferior para separar el header del contenido */
+    font-family: "Space Mono", serif; /* Uso la fuente "Space Mono" */
+    font-weight: 700; /* El texto es en negrita */
+    font-style: normal; /* Estilo normal (sin cursiva) */
+    border-radius: 5px; /* Bordes redondeados */
+    padding-left: 5px; /* Relleno interno a la izquierda */
+    padding-right: 5px; /* Relleno interno a la derecha */
+    width: 1200px; /* Ancho fijo para el header */
+    text-align: center; /* Centrado del texto */
+    color: #18364d; /* Color de texto en gris oscuro */
+    border-color: #18364d; /* Borde con el mismo color del texto */
+    border-style: solid; /* Borde sólido */
+}
+
+/* Ajuste de la posición del título dentro del header */
+h1 {
+    position: relative;
+    top: 4px; /* Desplazo el título ligeramente hacia abajo */
+}
+
+/* Estilos para el área principal */
+main {
+    grid-area: main; /* Coloco el área principal en el área correspondiente */
+}
+
+.mainContainer{
+    display: grid;
+    grid-template-columns: repeat(2 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "loginAccountAdmin loginAccountUser";
+   position: relative;
+   top: 20%;
+}
+
+.loginAccountAdmin{
+    grid-area: loginAccountAdmin;
+    display: grid;
+    grid-template-columns: 400px;
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo con transparencia */
+     border-color: #fcaf5c;
+     border-style: solid;
+    border-radius: 10px; /* Bordes redondeados */
+    margin-left: 120px;
+    margin-right: 120px;
+    padding-bottom: 40px;
+}
+
+.loginAccountUser{
+    grid-area: loginAccountUser;
+    display: grid;
+     grid-template-columns: 400px;
+     background-color: rgba(0, 0, 0, 0.4); /* Fondo con transparencia */
+     border-color: #fcaf5c;
+     border-style: solid;
+    border-radius: 10px; /* Bordes redondeados */
+    margin-left: 120px;
+    margin-right: 120px;
+    padding-bottom: 40px;
+}
+
+/* Estilos para los inputs (campos de texto) */
+input {
+    position: relative;  /* Necesario para usar z-index */
+    z-index: 10;  /* Los inputs están al frente */
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    margin: 5px; /* Margen para separar el botón de otros elementos */
+    font-family: "Space Mono", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #18364d;
+    border-color: #fcaf5c;
+    border-style: solid;
+    background-color: wheat;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: all 0.3s ease; /* Transición suave */
+    height: 15px;
+}
+
+h2{
+    justify-content: center; /* Alineo el contenido al centro */
+    justify-self: center; /* Alineo este elemento al centro de su celda */
+    align-items: center; /* Alineo verticalmente */
+    background-color: #fcaf5c; /* Fondo de color naranja */
+    margin: 20px; /* Margen para separar el botón de otros elementos */
+    font-family: "Space Mono", serif; /* Uso la fuente "Space Mono" */
+    font-weight: 700; /* Negrita */
+    font-style: italic; /* Estilo en cursiva */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px;
+    margin-left: 120px;
+    margin-right: 120px;
+    font-size: 25px; /* Tamaño de fuente */
+    width: 350px; /* Ancho fijo */
+    color: #18364d; /* Color del texto */   
+    z-index: 1; /* Aseguro que esté por encima de otros elementos */
+    border-color: #18364d; /* Color del borde */
+    border-style: solid; /* Borde sólido */
+    text-align: center;
+}
+
+/* Estilos para cuando el input está enfocado */
+input:focus {
+    border-color: #18364d; /* Cambio de color en el borde cuando está enfocado */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Sombra más fuerte */
+    outline: none; /* Quito el borde de enfoque por defecto */
+    z-index: 20;  /* El input está por encima de otros elementos cuando tiene foco */
+}
+
+/* Estilos para los botones */
+button {
+    position: relative;  /* Necesario para usar z-index */
+    z-index: 5;  /* Los botones tienen prioridad, pero menos que los inputs */
+    font-family: "Space Mono", serif;
+    font-weight: 700;
+    font-style: normal;
+    border-radius: 5px;
+    font-size: medium;
+    border-color: #fcaf5c;
+    border-style: solid;
+    background-color: #18364d;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave cuando pasa el mouse */
+    width: 140px;
+    justify-content: center; /* Alineo el contenido al centro */
+    justify-self: center; /* Alineo este elemento al centro de su celda */
+    align-items: center; /* Alineo verticalmente */
+    margin-top: 15px;
+}
+
+/* Estilos para el botón cuando pasa el mouse sobre él */
+button:hover {
+    background-color: #fcaf5c; /* Fondo naranja cuando pasa el mouse */
+    color: #18364d; /* Cambio el color del texto a oscuro */
+    z-index: 15;  /* El botón está encima de los inputs en hover */
+    
+}

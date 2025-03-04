@@ -1,95 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <!-- Establezco la codificación de caracteres para que los caracteres especiales se muestren correctamente -->
     <meta charset="UTF-8">
-   
-    <!-- Establezco la vista para dispositivos móviles, para que la página se adapte al tamaño de la pantalla -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <!-- Titulo de la página que aparecerá en la pestaña del navegador -->
-    <title>Main Page Users</title>
-   
-    <!-- Enlazo el archivo CSS que contiene los estilos para la página -->
+    <title>Formulario de Solicitud</title>
     <link rel="stylesheet" href="../styles/mainPageUsers.css">
-   
-    <!-- Conecto con Google Fonts para usar fuentes personalizadas en la página -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Lexend:wght@100..900&family=Matemasie&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-   
-    <!-- Incluyo el CDN de SweetAlert2 para mostrar alertas personalizadas -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-    <!-- El encabezado de la página, que contiene el título principal y el nombre del usuario -->
-    <header>
-        <!-- Titulo principal que indica que estamos en el formulario de solicitud -->
-        <h1 id="chooseHeadquarters">Formulario de solicitud</h1>
-        <!-- Muestra el nombre del usuario aquí, que será insertado dinámicamente -->
-        <h2 id="userName">Usuario</h2>
-    </header>
-   
-    <main>
-        <div>
-            <!-- Comienzo del formulario donde el usuario podrá realizar su solicitud -->
-            <label for="headquarterSelect">Selecciona una sede:</label>
-            <!-- Un desplegable para que el usuario seleccione una sede, cada opción tiene un valor representativo -->
-            <select id="headquarterSelect">
-                <option value="">Selecciona una sede</option>
-                <option value="SJ">San Jose</option>
-                <option value="AL">Alajuela</option>
-                <option value="HE">Heredia</option>
-                <option value="PU">Puntarenas</option>
-                <option value="GU">Guanacaste</option>
-                <option value="LI">Limon</option>
-                <option value="CA">Cartago</option>
-            </select>
+    <div class="globalContainer">
+        <header>
+            <h1 id="chooseHeadquarters">Formulario de solicitud</h1>
+            <h1 id="userName">Usuario</h1>
+        </header>
 
-            <!-- Entrada de fecha para la fecha de salida -->
-            <label for="departureDate">Fecha de salida</label>
-            <input type="date" id="departureDate">
-           
-            <!-- Entrada de fecha para la fecha de regreso -->
-            <label for="returnDate">Fecha de regreso</label>
-            <input type="date" id="returnDate">
-           
-            <!-- Entrada de texto para que el usuario ingrese el código de la computadora -->
-            <label for="computerCode">Código de computadora</label>
-            <input type="text" id="computerCode">
-           
-            <!-- Lista con recomendaciones sobre cómo manejar el equipo -->
-            <ul>
-                <li>Si viajas en transporte público, debes resguardar tu equipo en tu bolso personal, no exponerlo.</li>
-                <li>Si llevas el equipo, procura ir acompañado.</li>
-                <li>Si está lloviendo, procura llevar el equipo en un vehículo apropiado para evitar algún daño.</li>
-                <li>Evitar jugar, descargar o utilizar el equipo para otros motivos que no sean relacionados con el estudio.</li>
-                <li>El equipo será revisado antes y después de ser entregado. Cualquier alteración o instalación indebida podría resultar en la pérdida de privilegios.</li>
-                <li>Si retiras una computadora sin haber completado el formulario y la boleta física, podrías ser amonestado.</li>
-                <li>Este formulario debe llenarse junto con la boleta física, que debe estar firmada por la persona encargada.</li>
-            </ul>
-           
-            <!-- Checkbox que el usuario debe aceptar para poder enviar la solicitud -->
-            <label for="termsCheckbox">Aceptar términos</label>
-            <input type="checkbox" id="termsCheckbox">
-           
-            <!-- Botón para enviar la solicitud, inicialmente está deshabilitado -->
-            <button id="submitRequestButton" disabled>Enviar</button>
-        </div>
+        <main>
+            <section class="formContainer">
+                <form id="requestForm">
+                    <div class="form__group">
+                        <h2 class="formularioTitle">Formulario</h2>
+                    </div>
 
-        <div>
-            <!-- Título de la sección de historial de solicitudes -->
-            <h3>Historial de solicitudes</h3>
-           
-            <!-- Contenedor donde se mostrarán las solicitudes pendientes del usuario -->
-            <div id="requestUserPending"></div>
-           
-            <!-- Contenedor donde se mostrarán las solicitudes del usuario -->
-            <div id="requestUserContainer"></div>
-        </div>
-    </main>
+                    <div class="form__group">
+                        <label for="headquarterSelect">Selecciona una sede:</label>
+                        <select id="headquarterSelect">
+                            <option value="">Selecciona una sede</option>
+                            <option value="SJ">San Jose</option>
+                            <option value="AL">Alajuela</option>
+                            <option value="HE">Heredia</option>
+                            <option value="PU">Puntarenas</option>
+                            <option value="GU">Guanacaste</option>
+                            <option value="LI">Limon</option>
+                            <option value="CA">Cartago</option>
+                        </select>
+                    </div>
 
-    <!-- Vinculo al archivo JS que maneja la lógica de la página -->
+                   <div class="form__group">
+                        <label for="computerCode">Código de computadora</label>
+                        <input type="text" id="computerCode">
+                    </div> 
+                    
+                    <div class="form__group">
+                        <label for="departureDate">Fecha de salida</label>
+                        <input type="date" id="departureDate">
+                    </div>
+
+                    <div class="form__group">
+                        <label for="returnDate">Fecha de regreso</label>
+                        <input type="date" id="returnDate">
+                    </div>
+
+                    <div class="form__infoList">
+                        <h2>Términos</h2>
+                        <ul class="listSize">
+                            <li>Si viajas en transporte público, debes resguardar tu equipo en tu bolso personal, no exponerlo.</li>
+                            <li>Si llevas el equipo, procura ir acompañado.</li>
+                            <li>Si está lloviendo, procura llevar el equipo en un vehículo apropiado para evitar algún daño.</li>
+                            <li>Evitar jugar, descargar o utilizar el equipo para otros motivos que no sean relacionados con el estudio.</li>
+                            <li>El equipo será revisado antes y después de ser entregado. Cualquier alteración o instalación indebida podría resultar en la pérdida de privilegios.</li>
+                            <li>Si retiras una computadora sin haber completado el formulario y la boleta física, podrías ser amonestado.</li>
+                            <li>Este formulario debe llenarse junto con la boleta física, que debe estar firmada por la persona encargada.</li>
+                        </ul>
+                    </div>
+
+                    <div class="form__group">
+                        <input type="checkbox" id="termsCheckbox">
+                        <label for="termsCheckbox">Aceptar términos</label>
+                    </div>
+
+                    <button id="submitRequestButton" disabled>Enviar</button>
+                </form>
+            </section>
+
+            <section class="historyContainer">
+                <h3>Historial de solicitudes</h3>
+                <div id="requestUserPending">No tienes solicitudes pendientes.</div>
+                <div id="requestUserContainer">No tienes solicitudes aprobadas o denegadas.</div>
+            </section>
+        </main>
+    </div>
+
     <script src="../js/mainPageUsers.js"></script>
 </body>
 </html>

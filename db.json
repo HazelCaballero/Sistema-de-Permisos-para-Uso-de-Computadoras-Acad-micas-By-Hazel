@@ -1,48 +1,198 @@
 {
   "admins": [
     {
-      "id": "4819",
-      "adminId": "Hazel1234",
-      "adminPassword": "Hazel1234"
+      "id": "95e5",
+      "adminId": "HazelCaballero34",
+      "adminPassword": "Ha12Zel56"
     },
     {
-      "id": "45df",
-      "adminId": "ENrique3473",
-      "adminPassword": "ENrique3473"
+      "id": "fa96",
+      "adminId": "Enrique34",
+      "adminPassword": "Enr12Ique56"
+    },
+    {
+      "id": "0cc3",
+      "adminId": "DianaElizondo50",
+      "adminPassword": "Dia34Na56"
     }
   ],
   "users": [
     {
-      "id": "abbe",
-      "userId": "Pamela23435",
-      "userPassword": "Pamela23435"
+      "id": "8c42",
+      "userId": "PamelaElizondo56",
+      "userPassword": "Pam34ela78"
     },
     {
-      "id": "9969",
-      "userId": "Pamela5678",
-      "userPassword": "Pamela5678"
+      "id": "1e4f",
+      "userId": "Angel56",
+      "userPassword": "Ang34el78"
+    },
+    {
+      "id": "d4f0",
+      "userId": "GabierlaArias76",
+      "userPassword": "Gabr98iela54"
     }
   ],
   "requests": [
     {
-      "id": "8684",
-      "userId": "Pamela5678",
-      "departureDate": "2025-03-20",
-      "returnDate": "2025-04-04",
-      "computerCode": "rfed4r554",
+      "id": "47c7",
+      "userId": "GabierlaArias76",
+      "departureDate": "2025-01-07",
+      "returnDate": "2025-03-13",
+      "computerCode": "7n5c4hr",
+      "termsCheckbox": true,
+      "headquarters": "San Jose",
+      "status": "Pendiente"
+    },
+    {
+      "id": "479c",
+      "userId": "GabierlaArias76",
+      "departureDate": "2025-01-15",
+      "returnDate": "2025-03-19",
+      "computerCode": "7n5c4hr",
+      "termsCheckbox": true,
+      "headquarters": "Alajuela",
+      "status": "Pendiente"
+    },
+    {
+      "id": "459a",
+      "userId": "GabierlaArias76",
+      "departureDate": "2025-01-21",
+      "returnDate": "2025-03-28",
+      "computerCode": "7n5c4hr",
+      "termsCheckbox": true,
+      "headquarters": "Heredia",
+      "status": "Pendiente"
+    },
+    {
+      "id": "ca37",
+      "userId": "GabierlaArias76",
+      "departureDate": "2025-02-11",
+      "returnDate": "2025-03-19",
+      "computerCode": "7n5c4hr",
+      "termsCheckbox": true,
+      "headquarters": "Puntarenas",
+      "status": "Pendiente"
+    },
+    {
+      "id": "569b",
+      "userId": "GabierlaArias76",
+      "departureDate": "2025-02-26",
+      "returnDate": "2025-02-28",
+      "computerCode": "7n5c4hr",
+      "termsCheckbox": true,
+      "headquarters": "Guanacaste",
+      "status": "Pendiente"
+    },
+    {
+      "id": "601a",
+      "userId": "GabierlaArias76",
+      "departureDate": "2025-03-04",
+      "returnDate": "2025-03-14",
+      "computerCode": "7n5c4hr",
+      "termsCheckbox": true,
+      "headquarters": "Limon",
+      "status": "Pendiente"
+    },
+    {
+      "id": "f02a",
+      "userId": "GabierlaArias76",
+      "departureDate": "2025-03-18",
+      "returnDate": "2025-03-28",
+      "computerCode": "7n5c4hr",
+      "termsCheckbox": true,
+      "headquarters": "Cartago",
+      "status": "Pendiente"
+    },
+    {
+      "id": "6625",
+      "userId": "PamelaElizondo56",
+      "departureDate": "2025-02-05",
+      "returnDate": "2025-03-13",
+      "computerCode": "rd7nf45",
       "termsCheckbox": true,
       "headquarters": "Alajuela",
       "status": "Aprobada"
     },
     {
-      "id": "c9b0",
-      "userId": "Pamela5678",
-      "departureDate": "2025-03-05",
-      "returnDate": "2025-03-18",
-      "computerCode": "uysiedr45",
+      "id": "81b3",
+      "userId": "PamelaElizondo56",
+      "departureDate": "2025-02-18",
+      "returnDate": "2025-03-27",
+      "computerCode": "rd7nf45",
       "termsCheckbox": true,
       "headquarters": "Guanacaste",
+      "status": "Pendiente"
+    },
+    {
+      "id": "fd9d",
+      "userId": "PamelaElizondo56",
+      "departureDate": "2025-03-05",
+      "returnDate": "2025-03-21",
+      "computerCode": "rd7nf45",
+      "termsCheckbox": true,
+      "headquarters": "Cartago",
       "status": "Denegada"
+    },
+    {
+      "id": "5ffa",
+      "userId": "Angel56",
+      "departureDate": "2025-01-01",
+      "returnDate": "2025-03-21",
+      "computerCode": "cfr58r5u",
+      "termsCheckbox": true,
+      "headquarters": "Puntarenas",
+      "status": "Pendiente"
+    },
+    {
+      "id": "fcc3",
+      "userId": "Angel56",
+      "departureDate": "2024-12-09",
+      "returnDate": "2024-12-27",
+      "computerCode": "cfr58r5u",
+      "termsCheckbox": true,
+      "headquarters": "Alajuela",
+      "status": "Pendiente"
+    },
+    {
+      "id": "c78e",
+      "userId": "Angel56",
+      "departureDate": "2025-01-07",
+      "returnDate": "2025-01-17",
+      "computerCode": "cfr58r5u",
+      "termsCheckbox": true,
+      "headquarters": "San Jose",
+      "status": "Pendiente"
+    },
+    {
+      "id": "bf5c",
+      "userId": "Angel56",
+      "departureDate": "2025-01-21",
+      "returnDate": "2025-01-31",
+      "computerCode": "cfr58r5u",
+      "termsCheckbox": true,
+      "headquarters": "Heredia",
+      "status": "Pendiente"
+    },
+    {
+      "id": "7520",
+      "userId": "Angel56",
+      "departureDate": "2025-02-26",
+      "returnDate": "2025-03-05",
+      "computerCode": "cfr58r5u",
+      "termsCheckbox": true,
+      "headquarters": "Limon",
+      "status": "Pendiente"
+    },
+    {
+      "id": "8832",
+      "userId": "Angel56",
+      "departureDate": "2025-03-11",
+      "returnDate": "2025-03-20",
+      "computerCode": "cfr58r5u",
+      "termsCheckbox": true,
+      "headquarters": "San Jose",
+      "status": "Pendiente"
     }
   ]
 }

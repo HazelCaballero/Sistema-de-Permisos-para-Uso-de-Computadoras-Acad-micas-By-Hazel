@@ -11,10 +11,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     const btnSearchRestart = document.getElementById('btnSearchRestart');
     const requestUserContainer = document.getElementById('requestUserContainer');
     const searchResultsContainer = document.getElementById('searchResults');
-   
+    
     // Obtengo el ID del administrador desde el almacenamiento local
     const adminId = localStorage.getItem('adminId');
-   
+    
     // Si no encuentro el ID de administrador, redirijo al login
     if (!adminId) {
         alert('No se encontró el ID de administrador. Redirigiendo a login...');
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Actualiza el contenedor de solicitudes por usuario
         requestsPerUser.innerHTML = '';
         for (let userId in requestsByUser) {
-            requestsPerUser.innerHTML += `<p>Usuario ${userId}: ${requestsByUser[userId]} solicitudes</p>`;
+            requestsPerUser.innerHTML += `<p class="user-request-item">Usuario ${userId}: ${requestsByUser[userId]} solicitudes</p>`;
         }
 
         // Calcula el número de solicitudes por estado (Pendiente, Aprobada, Denegada)
@@ -60,9 +60,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         }, {});
         // Actualiza el contenedor de solicitudes por estado
         requestsByStatus.innerHTML = `
-            Pendientes: ${statusCounts['Pendiente'] || 0} <br>
-            Aprobadas: ${statusCounts['Aprobada'] || 0} <br>
-            Denegadas: ${statusCounts['Denegada'] || 0}
+            <p class="status-count">Pendientes: ${statusCounts['Pendiente'] || 0}</p>
+            <p class="status-count">Aprobadas: ${statusCounts['Aprobada'] || 0}</p>
+            <p class="status-count">Denegadas: ${statusCounts['Denegada'] || 0}</p>
         `;
 
         // Calcula cuántas solicitudes hay por cada sede
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Actualiza el contenedor de solicitudes por sede
         requestsByHeadquarters.innerHTML = '';
         for (let headquarters in headquartersCounts) {
-            requestsByHeadquarters.innerHTML += `<p>Sede ${headquarters}: ${headquartersCounts[headquarters]} solicitudes</p>`;
+            requestsByHeadquarters.innerHTML += `<p class="headquarters-count">Sede ${headquarters}: ${headquartersCounts[headquarters]} solicitudes</p>`;
         }
     };
 
@@ -98,15 +98,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (filteredRequests.length === 0) {
             // Si no hay resultados, muestro un mensaje
             const noResultsMessage = document.createElement('p');
+            noResultsMessage.classList.add('no-results-message'); // Clase añadida
             noResultsMessage.textContent = 'No se encontraron resultados que coincidan con la búsqueda.';
             searchResultsContainer.appendChild(noResultsMessage);
         } else {
             // Si hay resultados, los muestro en el contenedor de resultados
             filteredRequests.forEach(request => {
                 const requestItem = document.createElement('div');
-                requestItem.classList.add('request-item');
+                requestItem.classList.add('request-item', 'search-result-item'); // Clases añadidas
                 requestItem.innerHTML = `
-                    <div style="border: 1px solid #000; padding: 10px; margin-bottom: 10px;">
+                    <div class="request-details">
                         <p><strong>Usuario:</strong> ${request.userId}</p>
                         <p><strong>Fecha de salida:</strong> ${request.departureDate}</p>
                         <p><strong>Fecha de regreso:</strong> ${request.returnDate}</p>
@@ -124,9 +125,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         requestUserContainer.innerHTML = ''; // Limpiar solicitudes previas
         requests.forEach(request => {
             const requestItem = document.createElement('div');
-            requestItem.classList.add('request-item');
+            requestItem.classList.add('request-item', 'historical-request-item'); // Clases añadidas
             requestItem.innerHTML = `
-                <div style="border: 1px solid #000; padding: 10px; margin-bottom: 10px;">
+                <div class="request-details">
                     <p><strong>Usuario:</strong> ${request.userId}</p>
                     <p><strong>Fecha de salida:</strong> ${request.departureDate}</p>
                     <p><strong>Fecha de regreso:</strong> ${request.returnDate}</p>

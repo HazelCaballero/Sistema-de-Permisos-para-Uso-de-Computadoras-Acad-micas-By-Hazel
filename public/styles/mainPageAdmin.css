@@ -1,1 +1,252 @@
-/* Asegurarme terminar css
+/* Estilos para las fuentes personalizadas con "Space Mono" */
+.space-mono-regular {
+    font-family: "Space Mono", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.space-mono-bold {
+    font-family: "Space Mono", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.space-mono-regular-italic {
+    font-family: "Space Mono", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.space-mono-bold-italic {
+    font-family: "Space Mono", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('../img/technology.jpg'); /* Aplico una imagen de fondo */
+    background-size: cover; /* Aseguro que la imagen cubra toda el área */
+    background-repeat: no-repeat; /* Evito que la imagen se repita */
+    min-height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/* Contenedor global */
+.globalContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr; /* Ajustamos la altura del main */
+    grid-template-areas:
+        "header"
+        "main";
+    justify-content: center;
+    padding: 20px;   
+}
+
+/* Header */
+header {
+    grid-area: header;
+}
+
+/* Main */
+main {
+    grid-area: main;
+    padding-top: 40px;
+    flex-grow: 1; /* Permite que el main ocupe el resto del espacio */
+    overflow: auto; /* Permite el scroll solo dentro del main */
+}
+
+/* Estilo del header */
+.headerContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "header1 header1 header1"
+        "header2 header3 header3";
+    width: 100%;
+    gap: 10px;
+}
+
+.header1, .header2, .header3 {
+    background-color: #fcaf5c;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #18364d;
+    color: #18364d;
+}
+
+.header1 {
+    grid-area: header1;
+    text-align: center;
+}
+
+.header2 {
+    grid-area: header2;
+    justify-self: start;
+    text-align: left;
+}
+
+.header3 {
+    grid-area: header3;
+    justify-self: end;
+    text-align: right;
+}
+
+/* Lista de solicitudes pendientes */
+#pendingRequestsList {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    max-height: 400px; /* Limitar la altura del contenedor de solicitudes */
+    overflow-y: auto; /* Agregar scroll vertical dentro de la lista */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    padding: 20px;
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+    color: white;
+    font-size: 25px;
+}
+
+#pendingRequestsList li {
+    background-color: #fcaf5c;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    color: #18364d;
+    font-size: 25px;
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid #18364d;
+}
+
+#pendingRequestsList .approveBtn, 
+#pendingRequestsList .denyBtn {
+    padding: 8px 12px;
+    border: 2px solid #18364d;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 15px;
+}
+
+#pendingRequestsList .approveBtn {
+    background-color: #214b35;
+    color: white;
+}
+
+#pendingRequestsList .denyBtn {
+    background-color: #6a2b2d;
+    color: white;
+}
+
+/* Estilos de los contenedores de solicitudes */
+#currentAdminList li, 
+#otherAdminList li {
+    background-color: rgba(252, 175, 92);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+    color: #18364d;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #18364d;
+}
+
+/* Sección de solicitudes revisadas por el administrador actual y otros administradores */
+#historySection {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#currentAdminRequests, #otherAdminsRequests {
+    display: flex;
+    flex-direction: column;
+    max-height: 380px;
+    overflow-y: auto; /* Agregar scroll solo dentro de estas secciones */
+    align-items: center;
+    padding: 0 30px;
+    background-color: rgba(24, 54, 77, 0.8);
+    border-radius: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    border: 2px solid;
+    border-color: #fcaf5c;
+}
+
+/* Títulos de las secciones */
+#currentAdminRequests h3, #otherAdminsRequests h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Estilo para el nombre del administrador */
+#adminName {
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: #18364d;
+}
+
+/* Estilo general para los encabezados */
+h3, h5 {
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    background-color: #fcaf5c;
+    font-family: "Space Mono", serif;
+    font-weight: 700;
+    font-style: italic;
+    border-radius: 5px;
+    font-size: 25px;
+    width: 350px;
+    color: #18364d;
+    z-index: 1;
+    border-color: #18364d;
+    border-style: solid;
+    text-align: center;
+    color: white;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+a {
+    color: #18364d;
+    text-decoration: none;
+}
+
+/* Aseguramos que el contenedor principal no tenga scroll general, pero que los contenedores internos puedan tenerlo */
+html, body {
+    height: 100%; /* Asegura que la página cubra toda la pantalla */
+    overflow: hidden; /* Elimina el scroll general en el body */
+}
+
+.globalContainer {
+    height: 100%;
+}

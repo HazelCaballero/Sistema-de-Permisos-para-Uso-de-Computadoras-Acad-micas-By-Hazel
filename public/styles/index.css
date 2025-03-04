@@ -40,7 +40,7 @@ body {
     padding: 10px; /* Agrego un poco de espacio interno al contenedor */
     display: grid; /* Uso grid para organizar los elementos en una cuadrícula */
     grid-template-columns: 1fr; /* Solo una columna en el diseño */
-    grid-template-rows: 90px 480px; /* Defino las alturas de las filas */
+    grid-template-rows: 90px 440px; /* Defino las alturas de las filas */
     grid-template-areas:
         "header header" /* El encabezado ocupará toda la fila */
         "main main"; /* El área principal ocupará el resto */
@@ -80,7 +80,7 @@ main {
 .mainContainer {
     display: grid; /* Uso grid para organizar los elementos en dos columnas */
     grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
-    grid-template-rows: 80px 410px 40px; /* Tres filas con diferentes alturas */
+    grid-template-rows: 70px 370px 20px; /* Tres filas con diferentes alturas */
     grid-template-areas:
         "createAccount createAccount" /* Una fila para la sección de crear cuenta */
         "createAdmin createUsers" /* Fila para crear administrador y usuarios */
@@ -121,7 +121,7 @@ main {
     backdrop-filter: blur(6px); /* Filtro de desenfoque */
     color: white; /* Color del texto blanco */
     grid-area: createAdmin; /* Coloco el área correspondiente */
-    padding: 30px; /* Padding para darle espacio interno */
+    padding: 10px; /* Padding para darle espacio interno */
     justify-items: center; /* Alineo el contenido al centro */
     text-align: center; /* Centrado del texto */
     margin-right: 10px; /* Margen derecho */
@@ -138,6 +138,7 @@ main {
     padding-right: 5px; /* Padding a la derecha */
     position: relative;
     z-index: 2; /* Coloco este elemento por encima de otros */
+    height: 300px;
 }
 
 /* Estilos para la sección de crear usuarios */
@@ -147,7 +148,7 @@ main {
     backdrop-filter: blur(6px);
     color: white;
     grid-area: createUsers;
-    padding: 30px;
+    padding: 10px;
     justify-items: center;
     text-align: center;
     margin-left: 10px;
@@ -164,6 +165,7 @@ main {
     padding-right: 5px;
     position: relative;
     z-index: 2;
+    height: 300px;
 }
 
 /* Estilos para el botón de ir al login */
@@ -175,7 +177,6 @@ main {
     align-items: center; /* Alineo verticalmente */
     padding: 20px; /* Padding para darle espacio */
     background-color: #fcaf5c; /* Fondo naranja */
-    margin-top: 5px; /* Margen superior */
     font-family: "Space Mono", serif; /* Fuente "Space Mono" */
     font-weight: 700; /* Negrita */
     font-style: normal; /* Estilo normal */
@@ -198,7 +199,6 @@ input {
     align-items: center;
     border-radius: 10px;
     text-align: center;
-    padding: 10px;
     font-family: "Space Mono", serif;
     font-weight: 700;
     font-style: normal;
@@ -247,7 +247,7 @@ button:hover {
 
 /* Estilos para las etiquetas de los campos de entrada */
 label {
-    font-size: 18px; /* Tamaño de fuente */
+    font-size: 14px; /* Tamaño de fuente */
     padding: 15px; /* Espaciado alrededor del texto */
     margin-top: 10px; /* Margen superior */
     font-weight: bold; /* Negrita */
