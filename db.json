@@ -42,7 +42,7 @@
       "computerCode": "7n5c4hr",
       "termsCheckbox": true,
       "headquarters": "San Jose",
-      "status": "Pendiente"
+      "status": "Denegada"
     },
     {
       "id": "479c",
@@ -52,7 +52,7 @@
       "computerCode": "7n5c4hr",
       "termsCheckbox": true,
       "headquarters": "Alajuela",
-      "status": "Pendiente"
+      "status": "Denegada"
     },
     {
       "id": "459a",
@@ -62,7 +62,7 @@
       "computerCode": "7n5c4hr",
       "termsCheckbox": true,
       "headquarters": "Heredia",
-      "status": "Pendiente"
+      "status": "Aprobada"
     },
     {
       "id": "ca37",
@@ -72,7 +72,7 @@
       "computerCode": "7n5c4hr",
       "termsCheckbox": true,
       "headquarters": "Puntarenas",
-      "status": "Pendiente"
+      "status": "Denegada"
     },
     {
       "id": "569b",
@@ -82,7 +82,7 @@
       "computerCode": "7n5c4hr",
       "termsCheckbox": true,
       "headquarters": "Guanacaste",
-      "status": "Pendiente"
+      "status": "Aprobada"
     },
     {
       "id": "601a",
@@ -92,7 +92,7 @@
       "computerCode": "7n5c4hr",
       "termsCheckbox": true,
       "headquarters": "Limon",
-      "status": "Pendiente"
+      "status": "Denegada"
     },
     {
       "id": "f02a",
@@ -102,7 +102,7 @@
       "computerCode": "7n5c4hr",
       "termsCheckbox": true,
       "headquarters": "Cartago",
-      "status": "Pendiente"
+      "status": "Aprobada"
     },
     {
       "id": "6625",
@@ -122,7 +122,7 @@
       "computerCode": "rd7nf45",
       "termsCheckbox": true,
       "headquarters": "Guanacaste",
-      "status": "Pendiente"
+      "status": "Denegada"
     },
     {
       "id": "fd9d",
@@ -142,7 +142,7 @@
       "computerCode": "cfr58r5u",
       "termsCheckbox": true,
       "headquarters": "Puntarenas",
-      "status": "Pendiente"
+      "status": "Aprobada"
     },
     {
       "id": "fcc3",
@@ -152,7 +152,7 @@
       "computerCode": "cfr58r5u",
       "termsCheckbox": true,
       "headquarters": "Alajuela",
-      "status": "Pendiente"
+      "status": "Aprobada"
     },
     {
       "id": "c78e",
@@ -162,7 +162,7 @@
       "computerCode": "cfr58r5u",
       "termsCheckbox": true,
       "headquarters": "San Jose",
-      "status": "Pendiente"
+      "status": "Aprobada"
     },
     {
       "id": "bf5c",
@@ -172,7 +172,7 @@
       "computerCode": "cfr58r5u",
       "termsCheckbox": true,
       "headquarters": "Heredia",
-      "status": "Pendiente"
+      "status": "Aprobada"
     },
     {
       "id": "7520",
@@ -182,7 +182,7 @@
       "computerCode": "cfr58r5u",
       "termsCheckbox": true,
       "headquarters": "Limon",
-      "status": "Pendiente"
+      "status": "Aprobada"
     },
     {
       "id": "8832",
@@ -192,7 +192,7 @@
       "computerCode": "cfr58r5u",
       "termsCheckbox": true,
       "headquarters": "San Jose",
-      "status": "Pendiente"
+      "status": "Denegada"
     }
   ]
 }

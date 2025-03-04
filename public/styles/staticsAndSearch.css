@@ -266,7 +266,7 @@ body {
 
 /* Estilo para las estadísticas de las sedes */
 .headquarters-count {
-    font-size: 1.2em;
+    font-size: 10px;
     color: #ffffff;
     margin-bottom: 5px;
 }
